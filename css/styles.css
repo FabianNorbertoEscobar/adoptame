@@ -1,3 +1,37 @@
-h1{
-    font-weight: bold;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
 }
+
+:root {
+    --first-main-brand-color: rgb(0, 89, 255);
+    --second-main-brand-color:  rgb(124, 7, 192);
+    --third-main-brand-color: #0400ff;
+}
+
+.brand-color-1 {
+    color: var(--first-main-brand-color);
+}
+
+.bg-brand-color-1 {
+    background-color: var(--first-main-brand-color);
+}
+
+.brand-color-2 {
+    color: var(--second-main-brand-color);
+}
+
+.bg-brand-color-2 {
+    background-color: var(--second-main-brand-color);
+}
+
+.brand-color-3 {
+    color: var(--third-main-brand-color);
+}
+
+.bg-brand-color-3 {
+    background-color: var(--third-main-brand-color);
+}
+
