@@ -10,35 +10,37 @@
 /* variables */
 
 :root {
-    --first-main-brand-color: rgb(0, 89, 255);
-    --second-main-brand-color:  rgb(124, 7, 192);
-    --third-main-brand-color: #0400ff;
+    --first-brand-color: #02DAFF;
+    --second-brand-color:  #FF9331;
+    --third-brand-color: #D6B3F7;
+    --fourth-brand-color: #0400ff;
+    --fifth-brand-color: #7c07c0;
 }
 
 /* brand colors */
 
 .brand-color-1 {
-    color: var(--first-main-brand-color);
+    color: var(--first-brand-color);
 }
 
 .bg-brand-color-1 {
-    background-color: var(--first-main-brand-color);
+    background-color: var(--first-brand-color);
 }
 
 .brand-color-2 {
-    color: var(--second-main-brand-color);
+    color: var(--second-brand-color);
 }
 
 .bg-brand-color-2 {
-    background-color: var(--second-main-brand-color);
+    background-color: var(--second-brand-color);
 }
 
 .brand-color-3 {
-    color: var(--third-main-brand-color);
+    color: var(--third-brand-color);
 }
 
 .bg-brand-color-3 {
-    background-color: var(--third-main-brand-color);
+    background-color: var(--third-brand-color);
 }
 
 /* custom scrollbar */
@@ -52,14 +54,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--first-main-brand-color);
+    background: var(--first-brand-color);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--first-main-brand-color);
+    background: var(--first-brand-color);
 }
 html {
-    scrollbar-color: var(--first-main-brand-color) whitesmoke;
+    scrollbar-color: var(--first-brand-color) whitesmoke;
     scrollbar-width: thin;
 }
