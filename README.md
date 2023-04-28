@@ -1,6 +1,6 @@
 <p align="left">
-<a href="https://www.w3schools.com/cs/" target="_blank"> <img src="img/isotipo redondo.png" alt="adoptame_isotipo" width="80" height="80" style="margin-right: 15px; margin-bottom: -10px;"/></a>
-<a href="https://www.w3schools.com/cs/" target="_blank" > <img src="img/logotipo celeste.png" alt="adoptame_isotipo" height="40"/></a>
+<img src="img/isotipo redondo.png" alt="adoptame_isotipo" width="80" height="80" style="margin-right: 15px; margin-bottom: -10px;"/>
+<img src="img/logotipo celeste.png" alt="adoptame_isotipo" height="40"/>
 </p>
 Proyecto del curso Full Stack Python del programa Codo a Codo del Gobierno de la Ciudad de Buenos Aires.
 
