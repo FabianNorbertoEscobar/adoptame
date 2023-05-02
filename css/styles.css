@@ -184,6 +184,10 @@ footer{
   background: var(--second-brand-color);
 }
 
+.footer-center .content a{
+  text-decoration: none;
+}
+
 .footer-center .content .fas{
   font-size: 1.4375rem;
   background: var(--third-brand-color);
