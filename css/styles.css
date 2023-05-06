@@ -100,7 +100,6 @@ html {
 /* footer */
 
 footer{
-  position: fixed;
   bottom: 0px;
   width: 100%;
   background: var(--first-brand-color);
