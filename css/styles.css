@@ -103,6 +103,7 @@ footer{
   bottom: 0px;
   width: 100%;
   background: var(--first-brand-color);
+  margin-top: 2%;
 }
 
 .footer-main{
@@ -273,3 +274,79 @@ footer{
 }
 
 /* end footer */
+
+/* titles and texts */
+
+.page-content{
+  margin: 3%;
+}
+
+.title {
+  color: var(--first-brand-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: var(--second-brand-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.text {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/* end titles and texts */
+
+/* nosotros */
+
+.refugios-img{
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+
+.content-center{
+  text-align: center;
+}
+
+.nosotros-img{
+  object-fit: cover;
+  border-radius: 10%;
+  margin: 2%;
+}
+
+.mapas{
+  width: 100% !important;
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2% 0%;
+}
+
+.mapas iframe{
+  margin: 2%;
+}
+
+@media screen and (max-width: 900px) {
+  .refugios-img{
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nosotros-img{
+    width: 60%;
+  }
+
+}
+
+/* end nosotros */
