@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/843eb62049.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header id="idheader">
+        
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <h3 class="working">Formulario</h3>
+            <h3>Consulta</h3>
+        </div>
+        <div class="tab-content">
+            <form action="#" method="post">
+                <fieldset class="field" name="formulario" method="get">
+                    <div class="working">
+                        <h4>Formulario de Adopcion</h4>
+                        
+                        <label for="firstname" >Nombre:</label>
+                        <input type="text" name="firstname" id="firstname" >
+                        
+                        <label for="lastname">Apellido:</label>
+                        <input type="text" name="lastname" id="lastname">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="street">Calle:</label>
+                        <input type="text" name="street" id="street text-contact">
+
+                        <label for="number">Numero:</label>
+                        <input type="number" name="number" id="number">
+
+                        <label for="birthdate">Fecha de nacimiento:</label>
+                        <input type="date" name="birthdate" id="birthdate">
+                        
+                        <p>Tipo de mascota:</p>
+                        <input type="radio" name="animal" id="dog">
+                        <label for="dog">Perro</label>
+                        <input type="radio" name="animal" id="cat">
+                        <label for="cat">Gato</label>
+                        
+                        <label for="petname">Nombre de la mascota:</label>
+                        <input type="text" name="petname" id="petname text-contact">
+
+                        <input type="reset" id="button" value="Borrar">
+                        <input type="submit" id="button" value="Enviar">
+
+                    </div>
+                    <div>
+                        <h4>Consulta</h4>
+                        
+                        <label for="firstname">Nombre:</label>
+                        <input type="text" name="firstname" id="firstname text-contact" >
+
+
+                        <label for="lastname">Apellido:</label>
+                        <input type="text" name="lastname text-contact" id="lastname">
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+
+                        <label for="msg">Tu Consulta</label>
+                        <textarea name="msg" id="msg"></textarea>
+
+                        <input type="reset" id="button" value="Borrar">
+                        <input type="submit" id="button" value="Enviar" />
+                        
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <footer id="idfooter">
+
+
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>
