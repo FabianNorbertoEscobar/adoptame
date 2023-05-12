@@ -1,0 +1,368 @@
+
+/*Colores base*/
+:root {
+  --first-brand-color: #02DAFF;
+  --second-brand-color:  #FF9331;
+  --third-brand-color: #D6B3F7;
+  --fourth-brand-color: #0400ff;
+  --fifth-brand-color: #7c07c0;
+}
+
+/*Tarjeta flor*/
+
+body{
+  background-color: #D6B3F7;
+}
+
+.contenedorgrid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  margin: 10px;
+}
+
+
+
+.principal{/*Contenedor Principal*/
+  background-color: #e9def3;
+  width: 330px;
+  height: 850px;
+  border: 1px solid white;
+  
+}
+
+.imagen1{
+ background-color: white;
+ width: 250px;
+ height: 250px;
+ margin-top: 15px;
+ margin-left: 50px;
+ background-image: url(/Fotosanimales/Perros/Blanquita.jpg);
+ background-size: cover;
+ border: 10px solid white ;
+ border-radius: 50%;
+}
+
+.imagen2{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-image: url(/Fotosanimales/Perros/Edén.jpg);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+ .imagen3{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-image: url(/Fotosanimales/Perros/Facundo2.jpg);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+ .imagen4{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-image: url(/Fotosanimales/Perros/lucero2.webp);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+ .imagen5{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-image: url(/Fotosanimales/Perros/Malevo.jpg);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+ .imagen6{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-image: url(/Fotosanimales/Perros/Rolo.jpg);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+ .imagen7{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 30px;
+
+  background-image: url(/Fotosanimales/Perros/silva3.jpeg);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+ .imagen8{
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-image: url(/Fotosanimales/Perros/Terra.jpg);
+  background-size: cover;
+  border: 10px solid white ;
+  border-radius: 50%;
+ }
+
+
+h1{
+ text-align: center;
+}
+
+
+p{
+  text-align: center;
+}
+
+.primertitle{
+  color: gray;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.adoptame{
+  text-align: center;
+}
+
+.textocontenedor{
+  width: 300px;
+  margin-left: 20px;
+
+}
+
+.centrar{
+  margin-left: 70px;
+}
+
+
+
+/* footer */
+
+footer{
+  bottom: 0px;
+  width: 100%;
+  background: var(--first-brand-color);
+  margin-top: 2%;
+}
+
+.footer-main{
+  display: flex;
+}
+
+.footer-main .footer-box{
+  flex-basis: 50%;
+  padding: 20px 15px;
+}
+
+.footer-box h2{
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.footer-box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 1px;
+  width: 100%;
+  background: black;
+}
+
+.footer-box .content:after{
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: 15%;
+  background: var(--second-brand-color);
+  top: -10px;
+}
+
+.footer-left .content p{
+  text-align: justify;
+}
+
+.footer-left .content .pages a{
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+}
+
+.footer-left .content .pages a:hover{
+  text-decoration: underline;
+  color: var(--fourth-brand-color);
+}
+
+.footer-left .content .social{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0 0 0;
+}
+
+.footer-left .content .social a{
+  padding: 0 2px;
+}
+
+.footer-left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: var(--third-brand-color);
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.footer-left .content .social a span:hover{
+  background: var(--second-brand-color);
+}
+
+.footer-center .content a{
+  text-decoration: none;
+}
+
+.footer-center .content .fas{
+  font-size: 1.4375rem;
+  background: var(--third-brand-color);
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-center .content .fas:hover{
+  background: var(--second-brand-color);
+}
+
+.footer-center .content .text{
+  font-size: 0.8rem;
+  padding-left: 10px;
+}
+
+.footer-center .content .text a{
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+}
+
+.footer-center .content .text a:hover{
+  text-decoration: underline;
+  color: var(--fourth-brand-color);
+}
+
+.footer-center .content .phone{
+  margin: 15px 0;
+}
+
+.footer-right .content form input{
+  margin-top: 10px;
+}
+
+.footer-right .content form .btn{
+  margin-top: 20px;
+}
+
+.footer-right .content p{
+  font-size: 0.8rem;
+}
+
+.footer-right .content form label{
+  font-size: 0.7rem;
+}
+
+.footer-bottom{
+  padding: 5px;
+  font-size: 0.7rem;
+  background: black;
+  text-align: center;
+}
+
+.footer-bottom span{
+  color: lightgray;
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  
+  .footer-main{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  
+  .footer-main .footer-box{
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-main .footer-box{
+    margin: 5px 0;
+  }
+}
+
+/* end footer */
+
+/* titles and texts */
+
+.page-content{
+  margin: 3%;
+}
+
+.title {
+  color: var(--first-brand-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: var(--second-brand-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.text {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+
