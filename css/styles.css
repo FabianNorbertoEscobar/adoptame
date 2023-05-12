@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input{
@@ -12,7 +12,7 @@ input{
   outline: none;
 }
 
-/** end global settings */
+/* end global settings */
 
 /* variables */
 
@@ -97,6 +97,34 @@ html {
 
 /* end custom scrollbar */
 
+/* titles and texts */
+
+.page-content{
+  margin: 3%;
+}
+
+.title {
+  color: var(--fifth-brand-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 15px;
+}
+
+.subtitle {
+  color: var(--second-brand-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.text {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+/* end titles and texts */
+
 /* footer */
 
 footer{
@@ -167,6 +195,7 @@ footer{
 
 .footer-left .content .social a{
   padding: 0 2px;
+  color: var(--fourth-brand-color)
 }
 
 .footer-left .content .social a span{
@@ -186,6 +215,7 @@ footer{
 
 .footer-center .content a{
   text-decoration: none;
+  color: var(--fourth-brand-color);
 }
 
 .footer-center .content .fas{
@@ -225,7 +255,7 @@ footer{
 }
 
 .footer-right .content form input{
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .footer-right .content form .btn{
@@ -238,6 +268,34 @@ footer{
 
 .footer-right .content form label{
   font-size: 0.7rem;
+}
+
+.lblSuscripcion{
+  display: block;
+  margin-top: 1em;
+  color: black;
+}
+
+.txtEmailSuscripcion{
+  padding: 0.5em !important;
+  border: solid 1px var(--fourth-brand-color);
+  width: 80%;
+}
+
+.btnSuscripcion{
+  padding: 0.5em;
+  border-radius: 4%;
+  background-color: var(--fourth-brand-color);
+  color:whitesmoke;
+  font-family: sans-serif;
+  font-size: .9em;
+  font-weight: 600;
+  width: 80%;
+}
+
+.btnSuscripcion:hover{
+  background-color: var(--second-brand-color);
+  cursor: pointer;
 }
 
 .footer-bottom{
@@ -265,6 +323,14 @@ footer{
   .footer-main .footer-box{
     margin: 15px 0;
   }
+  
+  .txtEmailSuscripcion{
+    width: 100%;
+  }
+  
+  .btnSuscripcion{
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -274,33 +340,6 @@ footer{
 }
 
 /* end footer */
-
-/* titles and texts */
-
-.page-content{
-  margin: 3%;
-}
-
-.title {
-  color: var(--first-brand-color);
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bolder;
-  font-size: 2rem;
-}
-
-.subtitle {
-  color: var(--second-brand-color);
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.text {
-  text-align: justify;
-  font-size: 1rem;
-}
-
-/* end titles and texts */
 
 /* nosotros */
 
@@ -342,86 +381,54 @@ footer{
     flex-direction: column;
     align-items: center;
   }
-
+  
   .nosotros-img{
     width: 60%;
   }
-
+  
 }
 
 /* end nosotros */
 
-/*Body de flor*/
-*{
-  background-color: white;
-}
+/* home */
 
 h1{
   font-weight: bold;
 }
 
-.caja{
-  
-  border: 4px;
-  background-color: rgb(35, 140, 175);
-  width: 430px;
-  height: 430px;
-
-
-  text-align: center;
-  line-height: 50px;
-
-
-}
-
-
-.color1{
-  background-color: rgb(253, 253, 135);
-  font-family: 'Times New Roman', Times, serif;
-  color: white;
-  text-align: right;
-}
-.nav{
-  color: brown;
-  border-radius: 10px;
-  font-size: 1.5vw;
-  text-decoration: none;
-  left: 1;
-  text-align: right;
-  padding: 5px;
-}
-
-
 .grid-container{
   display: grid;
-  background-color: white;
+  background-color: whitesmoke;
   grid-template-columns: auto auto auto;
 }
 
 .grid-container div{
-  background-color: rgb(35, 140, 175);
-  border: 1px solid white;
+  background-color: var(--fifth-brand-color);
+  border: 1px solid whitesmoke;
   text-align: center;
   margin: 3px;
   height: 425px;
   width: 437px;
-  color: white;
- }
+  color: whitesmoke;
+}
+
 .imagen1{
-  background-image: url(/img/Animalesflor/niñoyperro.webp);
+  background-image: url(../img/home/perros.webp);
   background-size: cover;
 }
+
 .imagen2{
-  background-image: url(/img/Animalesflor/gato\ portada.jpg);
+  background-image: url(../img/home/gatos.jpg);
   background-size: cover;
 }
+
 .imagen3{
-  background-image: url(/img/Animalesflor/rescatados2.jpg);
+  background-image: url(../img/home/rescatados.jpg);
   background-size: cover;
 }
 
 .nav1{
-  color: rgb(35, 140, 175);
+  color: whitesmoke;
   border-radius: 10px;
   font-size: 1.5vw;
   text-decoration: none;
@@ -430,4 +437,253 @@ h1{
   padding: 5px;
 }
 
+/* end home */
 
+/* header */
+
+header, .navbar{
+  top: 0;
+  margin-bottom: 90px !important;
+}
+
+.navbar{ /*el conjunto de icono y links en el header*/
+  background-color: var(--first-brand-color);
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.063em;
+  font-weight: 600;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.primary-icon{ /*solo el icono*/
+  height: 45px;
+}
+
+.nav-list{
+  list-style-type: none;
+}
+
+.nav-list .list-item{
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+.navbar a{
+  color: black;
+  text-decoration: none;
+}
+
+.list-item a:hover { /*cuando apoyas el cursor sobre el link a algun lado*/
+  color: black;
+  background-color: var(--second-brand-color);
+  cursor: pointer;
+  border-radius: 25%;
+  padding: 5px;
+  margin: -5px;
+}
+
+.menu{
+  display: none;/*reemplazar menu por active*/
+}
+
+.menu-line{
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  margin-bottom: 4px;
+}
+
+/*esto empieza con las tabs*/
+.container{
+  width: 30em;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: var(--fifth-brand-color);
+  box-shadow: 0 20px 40px rgb(black, 0.2);
+  z-index: 0;
+  margin-top: 30px;
+}
+
+.tabs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tabs h3{
+  background-color: var(--second-brand-color);
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab-content{
+  background-color: var(--fifth-brand-color);
+  padding: 50px 40px;
+}
+
+.tab-content h4{
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.tab-content p{
+  text-align: justify;
+  line-height: 1.9;
+  letter-spacing: 0.4px;
+  color: whitesmoke;
+}
+
+.tab-content div{
+  display: none;
+}
+
+.tab-content .working{
+  display: block;
+}
+
+.tabs .working{
+  background-color: var(--fifth-brand-color);
+  color: whitesmoke;
+}
+
+/* end header */
+
+/* contacto */
+
+.field{
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: solid 0.06em whitesmoke;
+  border-radius: 3%;
+}
+
+.field legend{
+  font-size: 1.25em;
+  padding: 0.25;
+  color: var(--third-brand-color)
+}
+
+.field label{
+  display: block;
+  margin-top: 1em;
+  color: whitesmoke;
+}
+
+.field label:first-of-type{
+  margin-top: 0;
+}
+
+/*input y textarea*/
+.field input{
+  padding: 0.5em;
+  border: solid 1px var(--fourth-brand-color);
+}
+
+.field input[type="text"],input[type="email"],input[type="date"],input[type="number"]{
+  width: 100%;
+}
+
+.field textarea{
+  min-height: 8em;
+  min-width: 100%;
+  padding: 0.5;
+  border:solid 1px whitesmoke;
+  resize: vertical;
+  max-height: 200px;
+}
+
+.field input[type=radio] + label {
+  display:inline-block;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.field input[type="radio"]{
+  margin-left: 1.5em;
+  margin-right: 0;
+}
+
+#dog{
+  margin-left: 0;
+}
+
+.field input[type="submit"], input[type="reset"]{
+  padding: 0.5em;
+  border-radius: 4%;
+  background-color: var(--first-brand-color);
+  color:whitesmoke;
+  font-family: sans-serif;
+  font-size: .9em;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 0.6em;
+}
+
+.field #button:hover{
+  background-color: var(--second-brand-color);
+}
+
+/*estilizacion de los mensajes de errores*/
+.field span{
+  position: absolute;
+  bottom: 12px;
+  right: 17px;
+  font-size:14px;
+  color: red;
+}
+
+.field span i {
+  color: seagreen;
+}
+
+@media all and (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    position: fixed;
+  }
+  
+  .navbar .container-icon {
+    width: 100%;
+  }
+  
+  .menu{
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 20px;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    display: none;
+  }
+  
+  .nav-list .list-item {
+    display: block;
+    border-top: 1px solid whitesmoke;
+  }
+  
+  .primary-icon{
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .active{
+    display: block;
+  }
+  
+}
+
+/* end contacto /*
