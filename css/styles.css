@@ -112,6 +112,15 @@ html {
   margin: 15px;
 }
 
+.section-title{
+  color: var(--second-brand-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin: 12px;
+}
+
 .subtitle {
   color: var(--second-brand-color);
   font-weight: bold;
@@ -478,11 +487,13 @@ header, .navbar{
   text-decoration: none;
 }
 
-.list-item a:hover { /*cuando apoyas el cursor sobre el link a algun lado*/
-  color: black;
+.list-item:hover{
   background-color: var(--second-brand-color);
   cursor: pointer;
-  border-radius: 25%;
+}
+
+.list-item a:hover { /*cuando apoyas el cursor sobre el link a algun lado*/
+  color: black;
   padding: 5px;
   margin: -5px;
 }
@@ -688,39 +699,36 @@ header, .navbar{
 
 /* end contacto /*
 
-/*Tarjeta flor*/
+/* tarjetas perros gatos */
 
 .contenedorgrid{
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto auto;
- }
+}
 
- .principal{/*Contenedor Principal*/
+.principal{/*Contenedor Principal*/
   background-color: #e9def3;
   width: 330px;
-  height: 890px;
-  border: 1px solid white;
-  
+  border: 1px solid whitesmoke;
 }
 
-img{
- background-color: white;
- width: 250px;
- height: 275px;
- margin-top: 15px;
- margin-left: 50px;
- background-size: cover;
- border: 10px solid white ;
- border-radius: 50%;
+.principal img{
+  background-color: whitesmoke;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-size: cover;
+  border: 10px solid whitesmoke;
+  border-radius: 50%;
 }
 
-h2{
- text-align: center;
+.principal h2{
+  text-align: center;
 }
 
-
-p{
+.principal p{
   text-align: center;
 }
 
@@ -730,17 +738,31 @@ p{
   text-transform: uppercase;
 }
 
-.adoptame{
-  text-align: center;
-}
-
 .textocontenedor{
   width: 300px;
   margin-left: 20px;
-
 }
 
 .centrar{
   margin-left: 110px;
 }
 
+/* end tarjetas perros gatos */
+
+/* tarjetas adoptados */
+
+
+
+/* end tarjetas adoptados */
+
+/* faq */
+
+
+
+/* end faq */
+
+/* requisitos de adopcion */
+
+
+
+/* end requisitos de adopcion */
