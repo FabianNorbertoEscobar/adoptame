@@ -55,10 +55,12 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     hamburguer.classList.remove("active");
     navList.classList.remove("active");
 }))
+/* end HEADER */
 
+/*BODY*/
 /* lo que deja cambiar entre las tabs formulario y consulta */
 let tabs = document.querySelectorAll(".tabs h3");
-let tabContents = document.querySelectorAll(".tab-content div");
+let tabContents = document.querySelectorAll(".tab-content .form");
 tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
         tabContents.forEach((content) => {
@@ -72,6 +74,198 @@ tabs.forEach((tab, index) => {
     });
 });
 
-/*validaciones*/
+/*validacione formulario*/
+const expresiones = {
+    name: /^[a-zA-ZÀ-ÿ]*\s{1}[a-zA-ZÀ-ÿ]*$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, 
+    street: /^[a-zA-Z]/,
+    number: /^\d{1,8}$/,
+    birthdate: /^\d{2}[/]\d{2}[/]\d{4}$/,
+    petname: /^[a-zA-Z]/,
+      
+}
 
-/* end HEADER */
+const campos = {
+    name: false,
+    email: false,
+    street: false,
+    number: false,
+    birthdate: false,
+    petname: false,
+}
+
+const form = document.getElementById("adopcion");
+const inputs = document.querySelectorAll("#adopcion input");
+
+const validarFormulario = (e) => {
+    switch (e.target.name) {
+        case "name":
+            validarCampo(expresiones.name, e.target, "name");
+
+            break;
+        case "email":
+            validarCampo(expresiones.email, e.target, "email");
+            break;
+        case "street":
+            validarCampo(expresiones.street, e.target, "street");
+
+            break;
+        case "number":
+            validarCampo(expresiones.number, e.target, "number");
+
+            break;   
+        case "birthdate":
+            validarCampo(expresiones.birthdate, e.target, "birthdate");
+            validarCumpleaños();
+
+            break;
+        case "petname":
+            validarCampo(expresiones.petname, e.target, "petname");
+
+            break;
+    }
+}
+
+const validarCampo = (expresion, input, campo) => {
+    if(expresion.test(input.value)){
+        document.getElementById(`grupo__${campo}`).classList.remove("formulario__grupo-incorrecto");
+        document.getElementById(`grupo__${campo}`).classList.add("formulario__grupo-correcto");
+        document.querySelector(`#grupo__${campo} i`).classList.add("fa-circle-check");
+        document.querySelector(`#grupo__${campo} i`).classList.remove("fa-circle-xmark");
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove("formulario__input-error-activo");
+        campos[campo] = true;
+    }else{
+        document.getElementById(`grupo__${campo}`).classList.add("formulario__grupo-incorrecto");
+        document.getElementById(`grupo__${campo}`).classList.remove("formulario__grupo-correcto");
+        document.querySelector(`#grupo__${campo} i`).classList.add("fa-circle-xmark");
+        document.querySelector(`#grupo__${campo} i`).classList.remove("fa-circle-check");
+        document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add("formulario__input-error-activo");
+        campos[campo] = false;
+    }
+}
+
+ const validarCumpleaños = () => {
+    const birthdate = document.getElementById("birthdate");
+    
+    
+
+   if (birthdate.value < 18 ){
+    document.getElementById("grupo__birthdate").classList.add("formulario__grupo-incorrecto");
+    document.getElementById("grupo__birthdate").classList.remove("formulario__grupo-correcto");
+    document.querySelector("#grupo__birthdate i").classList.add("fa-circle-xmark");
+    document.querySelector("#grupo__birthdate i").classList.remove("fa-circle-check");
+    document.querySelector("#grupo__birthdate .formulario__input-error").classList.add("formulario__input-error-activo");
+    campos["birthdate"] = false;
+    }else{
+        document.getElementById("grupo__birthdate").classList.remove("formulario__grupo-incorrecto");
+        document.getElementById("grupo__birthdate").classList.add("formulario__grupo-correcto");
+        document.querySelector("#grupo__birthdate i").classList.add("fa-circle-check");
+        document.querySelector("#grupo__birthdate i").classList.remove("fa-circle-xmark");
+        document.querySelector("#grupo__birthdate .formulario__input-error").classList.remove("formulario__input-error-activo");
+        campos["birthdate"] = true;
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("keyup", validarFormulario);
+    input.addEventListener("blur", validarFormulario);
+
+});
+    
+form.addEventListener("submit", (e) => {
+	e.preventDefault();
+
+	const radio = document.getElementById('radio');
+	if(campos.name && campos.email && campos.street && campos.number && campos.birthdate && campos.petname &&
+        radio.Checked){
+		form.reset();
+
+		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+		}, 5000);
+
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario__grupo-correcto');
+		});
+	} else {
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+	}
+});
+
+/*validacion formulario end */
+
+/*validacion consulta */
+const expresionesCon = {
+    name: /^[a-zA-ZÀ-ÿ]*\s{1}[a-zA-ZÀ-ÿ]*$/,
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+}
+
+const camposCon = {
+    name: false,
+    email: false,
+}
+
+const consulta = document.getElementById("consulta");
+const inputsCon = document.querySelectorAll("#consulta input");
+
+const validarConsulta = (e) => {
+    switch (e.target.name) {
+        case "name":
+            validarCampoCon(expresiones.name, e.target, "name");
+
+            break;
+        case "email":
+            validarCampoCon(expresiones.email, e.target, "email");
+            break;
+    }
+}
+
+const validarCampoCon = (expresionCon, inputCon, campoCon) => {
+    if(expresionCon.test(inputCon.value)){
+        document.getElementById(`grupo__${campoCon}__consulta`).classList.remove("consulta__grupo-incorrecto");
+        document.getElementById(`grupo__${campoCon}__consulta`).classList.add("consulta__grupo-correcto");
+        document.querySelector(`#grupo__${campoCon}__consulta i`).classList.add("fa-circle-check");
+        document.querySelector(`#grupo__${campoCon}__consulta i`).classList.remove("fa-circle-xmark");
+        document.querySelector(`#grupo__${campoCon}__consulta .consulta__input-error`).classList.remove("consulta__input-error-activo");
+        camposCon[campoCon] = true;
+    }else{
+        document.getElementById(`grupo__${campoCon}__consulta`).classList.add("consulta__grupo-incorrecto");
+        document.getElementById(`grupo__${campoCon}__consulta`).classList.remove("consulta__grupo-correcto");
+        document.querySelector(`#grupo__${campoCon}__consulta i`).classList.add("fa-circle-xmark");
+        document.querySelector(`#grupo__${campoCon}__consulta i`).classList.remove("fa-circle-check");
+        document.querySelector(`#grupo__${campoCon}__consulta .consulta__input-error`).classList.add("consulta__input-error-activo");
+        camposCon[campoCon] = false;
+    }
+}
+
+inputsCon.forEach((inputCon) => {
+    inputCon.addEventListener("keyup", validarConsulta);
+    inputCon.addEventListener("blur", validarConsulta);
+
+});
+
+consulta.addEventListener("submit", (e) => {
+	e.preventDefault();
+
+	if(camposCon.name && camposCon.email){
+            consulta.reset();
+
+		document.getElementById('consulta__mensaje-exito').classList.add('consulta__mensaje-exito-activo');
+		setTimeout(() => {
+			document.getElementById('consulta__mensaje-exito').classList.remove('consulta__mensaje-exito-activo');
+		}, 5000);
+
+		document.querySelectorAll('.consulta__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('consulta__grupo-correcto');
+		});
+	} else {
+		document.getElementById('consulta__mensaje').classList.add('consulta__mensaje-activo');
+	}
+});
+/*validacion consulta end */
+
+/*Mensaje email*/
+
+
+/* end BODY */
