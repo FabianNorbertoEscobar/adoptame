@@ -22,6 +22,8 @@ input{
   --third-brand-color: #D6B3F7;
   --fourth-brand-color: #0400ff;
   --fifth-brand-color: #7c07c0;
+  --sixth-brand-color: #ff91ed;
+  --seventh-brand-color: #ffec43;
 }
 
 /* end variables */
@@ -68,6 +70,22 @@ input{
   background-color: var(--fifth-brand-color);
 }
 
+.brand-color-6 {
+  color: var(--sixth-brand-color);
+}
+
+.bg-brand-color-6 {
+  background-color: var(--sixth-brand-color);
+}
+
+.brand-color-7 {
+  color: var(--seventh-brand-color);
+}
+
+.bg-brand-color-7 {
+  background-color: var(--seventh-brand-color);
+}
+
 /* end brand colors */
 
 /* custom scrollbar */
@@ -109,7 +127,16 @@ html {
   text-transform: uppercase;
   font-weight: bolder;
   font-size: 2rem;
-  margin: 15px;
+  margin: 30px;
+}
+
+.section-title{
+  color: var(--second-brand-color);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin: 12px;
 }
 
 .subtitle {
@@ -478,11 +505,13 @@ header, .navbar{
   text-decoration: none;
 }
 
-.list-item a:hover { /*cuando apoyas el cursor sobre el link a algun lado*/
-  color: black;
+.list-item:hover{
   background-color: var(--second-brand-color);
   cursor: pointer;
-  border-radius: 25%;
+}
+
+.list-item a:hover { /*cuando apoyas el cursor sobre el link a algun lado*/
+  color: black;
   padding: 5px;
   margin: -5px;
 }
@@ -772,3 +801,168 @@ header, .navbar{
 }
 
 /* end contacto /*
+
+/* tarjetas perros gatos */
+
+.contenedorgrid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+}
+
+.principal{/*Contenedor Principal*/
+  background-color: #e9def3;
+  width: 330px;
+  border: 1px solid whitesmoke;
+}
+
+.principal img{
+  background-color: whitesmoke;
+  width: 250px;
+  height: 250px;
+  margin-top: 15px;
+  margin-left: 50px;
+  background-size: cover;
+  border: 10px solid whitesmoke;
+  border-radius: 50%;
+}
+
+.principal h2{
+  text-align: center;
+}
+
+.principal p{
+  text-align: center;
+}
+
+.primertitle{
+  color: gray;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.textocontenedor{
+  width: 300px;
+  margin-left: 20px;
+}
+
+.centrar{
+  margin-left: 110px;
+}
+
+/* end tarjetas perros gatos */
+
+/* tarjetas adoptados */
+
+
+
+/* end tarjetas adoptados */
+
+/* faq */
+
+.qa {
+  margin: 2%;
+  border: solid 1px var(--fifth-brand-color);
+  padding: 2.5%;
+  background-color: var(--third-brand-color);
+}
+
+.question{
+  font-weight: bold;
+  margin-bottom: 2%
+}
+
+.answer{
+  font-style: italic;
+}
+
+.content-center{
+  text-align: center;
+}
+
+.confusos-img{
+  object-fit: cover;
+  border-radius: 10%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.faq{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.faq-questions{
+  background-color: var(--sixth-brand-color);
+  width: 68%;
+  margin-right: 2%;
+}
+
+.faq aside {
+  background-color: var(--seventh-brand-color);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.confusos-img-hidden-1, .confusos-img-hidden-2{
+  display: none;
+}
+
+.confusos-img-small{
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .confusos-img-hidden-1 {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  
+  .confusos-img-hidden-2{
+    display: block;
+  }
+  
+}
+
+@media screen and (max-width: 800px) {
+  
+  .faq aside {
+    display: none;
+  }
+
+  .faq-questions{
+    width: 100%;
+    margin-right: 0%;
+  }
+
+  .qa{
+    margin: 4% 2%;
+    padding: 4%;
+  }
+
+  .confusos-img-small{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+}
+
+
+/* end faq */
+
+/* requisitos de adopcion */
+
+
+
+/* end requisitos de adopcion */
