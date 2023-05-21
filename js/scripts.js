@@ -21,16 +21,19 @@ document.getElementById("header").innerHTML = `
                 <a href="index.html" class="nav-link">Inicio</a>
             </li>
             <li class="list-item">
+                <a href="perros.html" class="nav-link">Perros</a>
+            </li>
+            <li class="list-item">
+                <a href="gatos.html" class="nav-link">Gatos</a>
+            </li>
+            <li class="list-item">
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
             </li>
             <li class="list-item">
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </li>
+            <li class="list-item">
                 <a href="contacto.html" class="nav-link">Contacto</a>
-            </li>
-            <li class="list-item">
-                <a href="adoptados.html" class="nav-link">Adoptados</a>
-            </li>
-            <li class="list-item">
-                <a href="faq.html" class="nav-link">F.A.Q.</a>
             </li>
         </ul>
         <div class="menu" id="toggle-button">

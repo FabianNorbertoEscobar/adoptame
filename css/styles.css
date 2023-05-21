@@ -176,6 +176,15 @@ footer{
   text-transform: uppercase;
 }
 
+.footer-box h2 a,.footer-box h2 a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+.footer-box h2 a:hover{
+  text-decoration: underline
+}
+
 .footer-box .content{
   margin: 20px 0 0 0;
   position: relative;
