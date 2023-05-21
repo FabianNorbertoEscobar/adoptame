@@ -923,17 +923,17 @@ header, .navbar{
 }
 
 .imagen1{
-  background-image: url(../img/home/perros.webp);
+  background-image: url(../img/home/adoptados/perros.webp);
   background-size: cover;
 }
 
 .imagen2{
-  background-image: url(../img/home/gatos.jpg);
+  background-image: url(../img/home/adoptados/gatos.jpg);
   background-size: cover;
 }
 
 .imagen3{
-  background-image: url(../img/home/rescatados.jpg);
+  background-image: url(../img/home/adoptados/rescatados.jpg);
   background-size: cover;
 }
 
