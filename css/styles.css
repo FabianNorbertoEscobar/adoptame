@@ -850,6 +850,123 @@ header, .navbar{
   margin-left: 110px;
 }
 
+@media only screen and (max-width: 600px){
+  .contenedorgrid{
+    display: flex;
+    flex-direction: column;
+  }
+  .principal{
+    width: 600px;
+    height: 800px;
+    padding-left: 110px;
+    margin-left: 20px;
+  }
+  .textocontenedor{
+     font-size: medium;
+  }
+  .checkbox{
+    text-align: center;
+  }
+  .centrar{
+    padding-right: 100px;
+  }
+  .imagen1{
+    background-image: url(../img/home/tarjetas/MediaQueries/prueba2.webp);
+    background-size: cover;
+  }
+  .imagen2{
+    background-image: url(../img/home/tarjetas/MediaQueries/Adoptame4.avif);
+    background-size: cover;
+  }
+  .imagen3{
+    background-image: url(../img/home/tarjetas/MediaQueries/rescatita3.jpg);
+    background-size: cover;
+  }
+  
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin-left: 50px;
+  }
+  .nav1{
+    font-size: large;
+  }
+  }
+
+  @media only screen and (min-width: 600px){
+    .contenedorgrid{
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+    .centrar{
+      padding-left: 50px;
+    }
+    .principal{
+      height: 700px;
+    }
+    .grid-container{
+      display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    }
+    .nav1{
+      font-size: large;
+    }
+    .imagen1{
+      background-image: url(../img/home/tarjetas/MediaQueries/prueba2.webp);
+      background-size: cover;
+    }
+    .imagen2{
+      background-image: url(../img/home/tarjetas/MediaQueries/Adoptame4.avif);
+      background-size: cover;
+    }
+    .imagen3{
+      background-image: url(../img/home/tarjetas/MediaQueries/rescatita3.jpg);
+      background-size: cover;
+    }
+  }
+
+  @media only screen and (min-width: 800px){
+    .contenedorgrid{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: auto auto;
+    }
+    .grid-container{
+      display: grid;
+      background-color: whitesmoke;
+      grid-template-columns: auto auto auto;
+      margin-left: 0;
+    }
+    .imagen1{
+      background-image: url(../img/home/perros.webp);
+      background-size: cover;
+    }
+    
+    .imagen2{
+      background-image: url(../img/home/gatos.jpg);
+      background-size: cover;
+    }
+    
+    .imagen3{
+      background-image: url(../img/home/rescatados.jpg);
+      background-size: cover;
+    }
+    }
+  
+
+
+
+
+  
+  
+
+  
+
+
+
+
 /* end tarjetas perros gatos */
 
 /* tarjetas rescatados y adoptados */
@@ -985,10 +1102,6 @@ h2{
  text-align: center;
  color: gray;
 }
-
-
-
-
 img{
   background-color: white;
   width: 250px;
