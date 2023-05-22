@@ -983,24 +983,14 @@ header, .navbar{
   background-size: cover;
 }
 
-.nav1{
-  color: whitesmoke;
-  border-radius: 10px;
-  font-size: 1.5vw;
-  text-decoration: none;
-  left: 1;
-  text-align: right;
-  padding: 5px;
-}
-
-.main {
+.adoptados-main {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(6, 1fr);
 }
 
-.maquetado-a{
+.panel-a{
   background-color: var(--second-brand-color);
   color: whitesmoke;
   grid-column: 1/3;
@@ -1010,7 +1000,7 @@ header, .navbar{
   padding: 10px;
 }
 
-.maquetado-b{
+.panel-b{
   background-color: var(--seventh-brand-color);
   grid-column: 1/3;
   text-align: left;
@@ -1035,7 +1025,7 @@ header, .navbar{
   padding-right: 30px;
 }
 
-.maquetado-c{
+.panel-c{
   background-color: var(--seventh-brand-color);
   grid-column: 1/2;
   text-align: justify;
@@ -1044,7 +1034,7 @@ header, .navbar{
   margin: 10px;
 }
 
-.maquetado-e{
+.panel-e{
   background-color: var(--fifth-brand-color);
   grid-column: 2/3;
   text-align: justify;
@@ -1053,7 +1043,7 @@ header, .navbar{
   margin: 10px;
 }
 
-.maquetado-f{
+.panel-f{
   background-color: var(--sixth-brand-color);
   grid-column: 1/3;
   text-align: justify;
@@ -1064,7 +1054,7 @@ header, .navbar{
   margin: 10px;
 }
 
-.final{
+.adoptados-base{
   background-color: var(--seventh-brand-color);
   color: black;
   grid-column: 1/3;
@@ -1075,25 +1065,18 @@ header, .navbar{
   text-align: justify;
 }
 
-.textoprincipal{
+.adoptados-texto{
   margin: 50px;
   margin-top: 5px;
   font-size:medium;
   text-align: justify;
 }
 
-.textosegundo{
-  margin: 20px;
-  margin-top: 10px;
-  text-align: justify;
-  font-size: medium;
-}
-
 .foto{
   margin-top: 60px;
 }
 
-.maquetado{
+.panel{
   background-color: whitesmoke;
   width: 650px;
   height: 850px;
@@ -1109,7 +1092,7 @@ header, .navbar{
 .adoptados img{
   background-color: whitesmoke;
   width: 250px;
-  height: 275px;
+  height: 250px;
   margin-top: 15px;
   margin-left: 50px;
   background-size: cover;
