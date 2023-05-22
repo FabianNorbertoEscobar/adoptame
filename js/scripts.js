@@ -13,7 +13,10 @@ document.getElementById("header").innerHTML = `
     <nav class="navbar">
         <div class="container-icon">
             <a href="index.html">
-                <img class="primary-icon" src="img/logo_image.png">
+                <img class="primary-icon" src="img/isotipo icono.png" alt="isotipo adoptame">
+            </a>
+            <a href="index.html">
+                <img class="secondary-icon" src="img/logotipo naranja.png" alt="logotipo adoptame">
             </a>
         </div>
         <ul class="nav-list" id="navi-list">
@@ -21,16 +24,19 @@ document.getElementById("header").innerHTML = `
                 <a href="index.html" class="nav-link">Inicio</a>
             </li>
             <li class="list-item">
+                <a href="perros.html" class="nav-link">Perros</a>
+            </li>
+            <li class="list-item">
+                <a href="gatos.html" class="nav-link">Gatos</a>
+            </li>
+            <li class="list-item">
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
             </li>
             <li class="list-item">
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </li>
+            <li class="list-item">
                 <a href="contacto.html" class="nav-link">Contacto</a>
-            </li>
-            <li class="list-item">
-                <a href="adoptados.html" class="nav-link">Adoptados</a>
-            </li>
-            <li class="list-item">
-                <a href="faq.html" class="nav-link">F.A.Q.</a>
             </li>
         </ul>
         <div class="menu" id="toggle-button">
@@ -42,7 +48,6 @@ document.getElementById("header").innerHTML = `
 </header>
 `;
 
-/*hamburguer icon hace que el click muestre el menu en pantalla de tamaño chico*/ 
 const hamburguer = document.querySelector(".menu");
 const navList = document.querySelector(".nav-list");
 
@@ -55,10 +60,13 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     hamburguer.classList.remove("active");
     navList.classList.remove("active");
 }))
+
 /* end HEADER */
 
-/*BODY*/
-/* lo que deja cambiar entre las tabs formulario y consulta */
+/* CONTACTO */
+
+/* validacion formulario de adopcion */
+
 let tabs = document.querySelectorAll(".tabs h3");
 let tabContents = document.querySelectorAll(".tab-content .form");
 tabs.forEach((tab, index) => {
@@ -74,15 +82,13 @@ tabs.forEach((tab, index) => {
     });
 });
 
-/*validacione formulario*/
 const expresiones = {
     name: /^[a-zA-ZÀ-ÿ]*\s{1}[a-zA-ZÀ-ÿ]*$/,
-    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/, 
+    email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     street: /^[a-zA-Z]/,
     number: /^\d{1,8}$/,
     birthdate: /^\d{2}[/]\d{2}[/]\d{4}$/,
     petname: /^[a-zA-Z]/,
-      
 }
 
 const campos = {
@@ -101,27 +107,22 @@ const validarFormulario = (e) => {
     switch (e.target.name) {
         case "name":
             validarCampo(expresiones.name, e.target, "name");
-
             break;
         case "email":
             validarCampo(expresiones.email, e.target, "email");
             break;
         case "street":
             validarCampo(expresiones.street, e.target, "street");
-
             break;
         case "number":
             validarCampo(expresiones.number, e.target, "number");
-
-            break;   
+            break;
         case "birthdate":
             validarCampo(expresiones.birthdate, e.target, "birthdate");
             validarCumpleaños();
-
             break;
         case "petname":
             validarCampo(expresiones.petname, e.target, "petname");
-
             break;
     }
 }
@@ -144,12 +145,10 @@ const validarCampo = (expresion, input, campo) => {
     }
 }
 
- const validarCumpleaños = () => {
+const validarCumpleaños = () => {
     const birthdate = document.getElementById("birthdate");
-    
-    
 
-   if (birthdate.value < 18 ){
+if (birthdate.value < 18 ){
     document.getElementById("grupo__birthdate").classList.add("formulario__grupo-incorrecto");
     document.getElementById("grupo__birthdate").classList.remove("formulario__grupo-correcto");
     document.querySelector("#grupo__birthdate i").classList.add("fa-circle-xmark");
@@ -169,9 +168,8 @@ const validarCampo = (expresion, input, campo) => {
 inputs.forEach((input) => {
     input.addEventListener("keyup", validarFormulario);
     input.addEventListener("blur", validarFormulario);
-
 });
-    
+
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
@@ -193,9 +191,10 @@ form.addEventListener("submit", (e) => {
 	}
 });
 
-/*validacion formulario end */
+/* end validacion formulario de adopcion */
 
-/*validacion consulta */
+/* validacion formulario de consulta */
+
 const expresionesCon = {
     name: /^[a-zA-ZÀ-ÿ]*\s{1}[a-zA-ZÀ-ÿ]*$/,
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -213,7 +212,6 @@ const validarConsulta = (e) => {
     switch (e.target.name) {
         case "name":
             validarCampoCon(expresiones.name, e.target, "name");
-
             break;
         case "email":
             validarCampoCon(expresiones.email, e.target, "email");
@@ -242,7 +240,6 @@ const validarCampoCon = (expresionCon, inputCon, campoCon) => {
 inputsCon.forEach((inputCon) => {
     inputCon.addEventListener("keyup", validarConsulta);
     inputCon.addEventListener("blur", validarConsulta);
-
 });
 
 consulta.addEventListener("submit", (e) => {
@@ -263,9 +260,13 @@ consulta.addEventListener("submit", (e) => {
 		document.getElementById('consulta__mensaje').classList.add('consulta__mensaje-activo');
 	}
 });
-/*validacion consulta end */
 
-/*Mensaje email*/
+/* end validacion formulario de consulta */
+
+/* mensaje email */
 
 
-/* end BODY */
+
+/* end mensaje email */
+
+/* end CONTACTO */

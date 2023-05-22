@@ -32,7 +32,6 @@ Adóptame es un sitio web de adopción de animales (perros y gatos), donde se pu
 #### Tecnología utilizada
 * HTML
 * CSS
-* BootStrap
 * JavaScript
 * JQuery
 * Git
