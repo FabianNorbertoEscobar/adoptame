@@ -13,7 +13,10 @@ document.getElementById("header").innerHTML = `
     <nav class="navbar">
         <div class="container-icon">
             <a href="index.html">
-                <img class="primary-icon" src="img/logo_image.png">
+                <img class="primary-icon" src="img/isotipo icono.png" alt="isotipo adoptame">
+            </a>
+            <a href="index.html">
+                <img class="secondary-icon" src="img/logotipo naranja.png" alt="logotipo adoptame">
             </a>
         </div>
         <ul class="nav-list" id="navi-list">
