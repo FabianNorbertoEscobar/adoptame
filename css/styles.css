@@ -133,10 +133,9 @@ html {
 .section-title{
   color: var(--second-brand-color);
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
   font-size: 1.7rem;
-  margin: 12px;
+  margin: 30px;
 }
 
 .subtitle {
@@ -468,6 +467,10 @@ header, .navbar{
   cursor: pointer;
 }
 
+.tabs h3:hover{
+  background-color: var(--sixth-brand-color);
+}
+
 .tab-content{
   background-color: var(--fifth-brand-color);
   padding: 50px 40px;
@@ -646,6 +649,7 @@ header, .navbar{
 }
 .field button:hover{
   background-color: var(--second-brand-color);
+  cursor: pointer;
 }
 
 .formulario__grupo-input,
@@ -787,6 +791,10 @@ header, .navbar{
 
 /* faq */
 
+.faq a{
+  cursor: pointer;
+}
+
 .qa {
   margin: 2%;
   border: solid 1px var(--fifth-brand-color);
@@ -901,44 +909,47 @@ header, .navbar{
   grid-template-rows: auto auto;
 }
 
-.principal{
+.card{
   background-color: var(--third-brand-color);
   width: 330px;
   border: 1px solid whitesmoke;
+	transition-duration: 0.2s;
 }
 
-.principal img{
+.card img{
   background-color: whitesmoke;
   width: 250px;
   height: 250px;
   margin-top: 15px;
   margin-left: 50px;
   background-size: cover;
-  border: 10px solid whitesmoke;
+  border: 5px solid whitesmoke;
   border-radius: 50%;
 }
 
-.principal h2{
+.card img:hover{
+  border: 5px solid var(--second-brand-color);
+}
+
+.card .card-main h6{
+  text-align: center;
+  color: var(--fourth-brand-color);
+  font-size: 1.4em;
+}
+
+.card p{
   text-align: center;
 }
 
-.principal p{
-  text-align: center;
-}
-
-.primertitle{
+.animal-name{
   color: gray;
   text-align: center;
   text-transform: uppercase;
 }
 
-.textocontenedor{
+.card-main{
   width: 300px;
   margin-left: 20px;
-}
-
-.centrar{
-  margin-left: 110px;
 }
 
 .grid-container{
@@ -1106,19 +1117,142 @@ header, .navbar{
   border-radius: 50%;
 }
 
-.primertitle{
+.animal-name{
   color: gray;
   text-align: center;
   text-transform: uppercase;
 }
 
-.textocontenedor{
+.card-main{
   width: 300px;
   margin-left: 20px;
 }
 
 .centrar{
-  margin-left: 70px;
+  text-align: center;
+}
+
+.verMas{
+  margin: 1em 0em;
+  padding: 1em;
+  border-radius: 4%;
+  background-color: var(--fourth-brand-color);
+  color:whitesmoke;
+  font-size: 1em;
+  width: 80%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.verMas:hover{
+  background-color: var(--second-brand-color);
+  cursor: pointer;
+}
+
+.btnAdoptar{
+  margin: 0.8em 0em;
+  padding: 0.7em;
+  border-radius: 4%;
+  background-color: var(--fourth-brand-color);
+  color:whitesmoke;
+  font-size: .9em;
+  width: 80%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btnAdoptar:hover{
+  background-color: var(--second-brand-color);
+  cursor: pointer;
 }
 
 /* end home */
+
+/* animaciones */
+
+.sombra:hover{
+  box-shadow: 0px 0px 8px black;
+  border-radius: 30px 0px;
+}
+
+.redondeo-puntas-opuestas{
+  box-shadow: 0px 0px 1px black;
+	transition-duration: 0.2s;
+}
+
+.redondeo-puntas-opuestas:hover{
+  border-radius: 30px 0px;
+}
+
+.gradiente {
+	transition-duration: 0.3s;
+}
+
+.gradiente:hover {
+	background: linear-gradient(
+		45deg, var(--seventh-brand-color) 20%, var(--sixth-brand-color) 25%, var(--second-brand-color) 60%,
+		var(--fifth-brand-color) 70%, whitesmoke
+	);
+}
+
+.inclinacion:hover{
+	animation: 1s inclinacion 1;
+}
+
+@keyframes inclinacion{
+	20%{
+		transform: rotate(15deg);
+	}
+}
+
+.rebote:hover {
+	animation: 1s rebote 1;
+}
+
+@keyframes rebote{
+	20%,50%,80%{
+		transform: translateY(0px);
+	}
+	40%{
+		transform: translateY(-45px);
+	}
+	60%{
+		transform: translateY(-25px);
+	}
+}
+
+.chicle:hover {
+	animation: 0.7s chicle 1;
+}
+
+@keyframes chicle {
+	30%{
+		transform: scaleX(1.25) scaleY(0.75);
+	}
+	50%{
+		transform: scaleX(0.75) scaleY(1.25);
+	}
+	60%{
+		transform: scaleX(1.15) scaleY(0.85);
+	}
+}
+
+.borde-interno{
+	position: relative;
+}
+
+.borde-interno:before {
+	position: absolute;
+	border:  2px solid whitesmoke;
+	top: 4px;
+	bottom: 4px;
+	left:  4px;
+	right: 4px;
+	opacity: 0;
+}
+
+.borde-interno:hover:before {
+	opacity: 1;
+}
+
+/* end animaciones */
