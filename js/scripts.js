@@ -24,12 +24,6 @@ document.getElementById("header").innerHTML = `
                 <a href="index.html" class="nav-link">Inicio</a>
             </li>
             <li class="list-item">
-                <a href="perros.html" class="nav-link">Perros</a>
-            </li>
-            <li class="list-item">
-                <a href="gatos.html" class="nav-link">Gatos</a>
-            </li>
-            <li class="list-item">
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
             </li>
             <li class="list-item">

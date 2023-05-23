@@ -1111,23 +1111,6 @@ header, .navbar{
   text-align: center;
 }
 
-.verMas{
-  margin: 1em 0em;
-  padding: 1em;
-  border-radius: 4%;
-  background-color: var(--fourth-brand-color);
-  color:whitesmoke;
-  font-size: 1em;
-  width: 80%;
-  text-decoration: none;
-  text-align: center;
-}
-
-.verMas:hover{
-  background-color: var(--second-brand-color);
-  cursor: pointer;
-}
-
 .btnAdoptar{
   margin: 0.8em 0em;
   padding: 0.7em;
