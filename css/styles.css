@@ -780,7 +780,7 @@ header, .navbar{
     display: inline-block;
     margin-left: 10px;
   }
-
+  
   .active{
     display: block;
   }
@@ -854,11 +854,11 @@ header, .navbar{
 }
 
 @media screen and (max-width: 1200px) {
-
+  
   .confusos-img-hidden-1 {
     display: block;
   }
-
+  
 }
 
 @media screen and (max-width: 1000px) {
@@ -874,17 +874,17 @@ header, .navbar{
   .faq aside {
     display: none;
   }
-
+  
   .faq-questions{
     width: 100%;
     margin-right: 0%;
   }
-
+  
   .qa{
     margin: 4% 2%;
     padding: 4%;
   }
-
+  
   .confusos-img-small{
     display: flex;
     flex-direction: row;
@@ -913,7 +913,7 @@ header, .navbar{
   background-color: var(--third-brand-color);
   width: 330px;
   border: 1px solid whitesmoke;
-	transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .card img{
@@ -1084,10 +1084,6 @@ header, .navbar{
   text-align: justify;
 }
 
-.textocontenedor2{
-  width: 600px;
-  margin-left: 20px;
-}
 
 .adoptados img{
   background-color: whitesmoke;
@@ -1149,6 +1145,90 @@ header, .navbar{
   cursor: pointer;
 }
 
+@media only screen and (max-width: 600px){
+  .contenedorgrid{
+    display: flex;
+    flex-direction: column;
+  }
+  .card{
+    width: 600px;
+    height: 800px;
+    padding-left: 110px;
+    margin-left: 20px;
+  }
+  .imagen1{
+    background-image: url(../img/home/tarjetas/MediaQueries/prueba2.webp);
+    background-size: cover;
+  }
+  .imagen2{
+    background-image: url(../img/home/tarjetas/MediaQueries/Adoptame4.avif);
+    background-size: cover;
+  }
+  .imagen3{
+    background-image: url(../img/home/tarjetas/MediaQueries/rescatita3.jpg);
+    background-size: cover;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  .contenedorgrid{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .card{
+    height: 700px;
+  }
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+  }
+  .imagen1{
+    background-image: url(../img/home/tarjetas/MediaQueries/prueba2.webp);
+    background-size: cover;
+  }
+  .imagen2{
+    background-image: url(../img/home/tarjetas/MediaQueries/Adoptame4.avif);
+    background-size: cover;
+  }
+  .imagen3{
+    background-image: url(../img/home/tarjetas/MediaQueries/rescatita3.jpg);
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  .contenedorgrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+  }
+  .grid-container{
+    display: grid;
+    background-color: whitesmoke;
+    grid-template-columns: auto auto auto;
+    margin-left: 0;
+  }
+  .imagen1{
+    background-image: url(../img/home/perros.webp);
+    background-size: cover;
+  }
+  .imagen2{
+    background-image: url(../img/home/gatos.jpg);
+    background-size: cover;
+  }
+  .imagen3{
+    background-image: url(../img/home/rescatados.jpg);
+    background-size: cover;
+  }
+}
+
 /* end home */
 
 /* animaciones */
@@ -1160,7 +1240,7 @@ header, .navbar{
 
 .redondeo-puntas-opuestas{
   box-shadow: 0px 0px 1px black;
-	transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 
 .redondeo-puntas-opuestas:hover{
@@ -1168,74 +1248,74 @@ header, .navbar{
 }
 
 .gradiente {
-	transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 .gradiente:hover {
-	background: linear-gradient(
-		45deg, var(--seventh-brand-color) 20%, var(--sixth-brand-color) 25%, var(--second-brand-color) 60%,
-		var(--fifth-brand-color) 70%, whitesmoke
-	);
+  background: linear-gradient(
+  45deg, var(--seventh-brand-color) 20%, var(--sixth-brand-color) 25%, var(--second-brand-color) 60%,
+  var(--fifth-brand-color) 70%, whitesmoke
+  );
 }
 
 .inclinacion:hover{
-	animation: 1s inclinacion 1;
+  animation: 1s inclinacion 1;
 }
 
 @keyframes inclinacion{
-	20%{
-		transform: rotate(15deg);
-	}
+  20%{
+    transform: rotate(15deg);
+  }
 }
 
 .rebote:hover {
-	animation: 1s rebote 1;
+  animation: 1s rebote 1;
 }
 
 @keyframes rebote{
-	20%,50%,80%{
-		transform: translateY(0px);
-	}
-	40%{
-		transform: translateY(-45px);
-	}
-	60%{
-		transform: translateY(-25px);
-	}
+  20%,50%,80%{
+    transform: translateY(0px);
+  }
+  40%{
+    transform: translateY(-45px);
+  }
+  60%{
+    transform: translateY(-25px);
+  }
 }
 
 .chicle:hover {
-	animation: 0.7s chicle 1;
+  animation: 0.7s chicle 1;
 }
 
 @keyframes chicle {
-	30%{
-		transform: scaleX(1.25) scaleY(0.75);
-	}
-	50%{
-		transform: scaleX(0.75) scaleY(1.25);
-	}
-	60%{
-		transform: scaleX(1.15) scaleY(0.85);
-	}
+  30%{
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  50%{
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  60%{
+    transform: scaleX(1.15) scaleY(0.85);
+  }
 }
 
 .borde-interno{
-	position: relative;
+  position: relative;
 }
 
 .borde-interno:before {
-	position: absolute;
-	border:  2px solid whitesmoke;
-	top: 4px;
-	bottom: 4px;
-	left:  4px;
-	right: 4px;
-	opacity: 0;
+  position: absolute;
+  border:  2px solid whitesmoke;
+  top: 4px;
+  bottom: 4px;
+  left:  4px;
+  right: 4px;
+  opacity: 0;
 }
 
 .borde-interno:hover:before {
-	opacity: 1;
+  opacity: 1;
 }
 
 /* end animaciones */
