@@ -28,10 +28,17 @@
                 </div>
                 <div class="tab-content">
                     <div class="form working" id="form">
+<<<<<<< HEAD
                         <form action="get" method="post" class="adopcion" id="adopcion">
                             <fieldset class="field" id="formulario">
                             
                                 <h4>Formulario de Adopcion</h4>
+=======
+                        <form action="#" method="post" class="adopcion" id="adopcion">
+                            <fieldset class="field" id="formulario" name="formulario" method="get">
+                                
+                                <h4>Formulario de Adopci&oacute;n</h4>
+>>>>>>> refs/remotes/origin/dev
                                 
                                 <div class="formulario__grupo" id="grupo__name">
                                     <label for="name" class="formulario__label">Nombre y apellido:</label>
@@ -39,7 +46,7 @@
                                         <input type="text" name="name" id="name" class="formulario__input">
                                         <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                                     </div>    
-                                    <p class="formulario__input-error">Ingrese su Nombre y Apellido</p>
+                                    <p class="formulario__input-error">Ingrese su nombre y apellido</p>
                                 </div>     
                                 
                                 <div class="formulario__grupo" id="grupo__email">
@@ -48,9 +55,9 @@
                                         <input type="email" name="email" id="email" class="formulario__input">
                                         <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                                     </div>
-                                    <p class="formulario__input-error">Ingrese un Email valido</p>
+                                    <p class="formulario__input-error">Ingrese un email v&aacute;lido</p>
                                 </div>
-
+                                
                                 <div class="formulario__grupo" id="grupo__street">
                                     <label for="street" class="formulario__label">Calle:</label>
                                     <div class="formulario__grupo-input">
@@ -59,14 +66,14 @@
                                     </div>
                                     <p class="formulario__input-error">Ingrese una calle </p>
                                 </div>
-
+                                
                                 <div class="formulario__grupo" id="grupo__number">
                                     <label for="number" class="formulario__label">N&uacute;mero de Calle:</label>
                                     <div class="formulario__grupo-input">
                                         <input type="text" name="number" id="number" class="formulario__input">
                                         <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
                                     </div>
-                                    <p class="formulario__input-error">Ingrese un numero </p>
+                                    <p class="formulario__input-error">Ingrese un n&uacute;mero </p>
                                 </div>
                                 
                                 <div class="formulario__grupo" id="grupo__birthdate">
@@ -75,7 +82,7 @@
                                         <input type="number" name="birthdate" id="birthdate" class="formulario__input">
                                         <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
                                     </div>
-                                    <p class="formulario__input-error">Ingrese su edad (Solo mayor de 18 años)</p>
+                                    <p class="formulario__input-error">Ingrese su edad (Solo mayor de 18 a&ntilde;os)</p>
                                 </div>
                                 
                                 <p>Tipo de mascota:</p>
@@ -90,18 +97,18 @@
                                         <input type="text" name="petname" id="petname" class="formulario__input">
                                         <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>   
                                     </div>
-                                    <p class="formulario__input-error">Ingrese un nombre valido</p>
+                                    <p class="formulario__input-error">Ingrese un nombre v&aacute;lido</p>
                                 </div>
-
+                                
                                 <button type="reset" id="button">Borrar</button>
                                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                                     <button type="submit" class="formulario__btn">Enviar</button>
-                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Solicitud enviada exitosamente!</p>
                                 </div>
                                 <div class="formulario__mensaje" id="formulario__mensaje">
                                     <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
                                 </div>
-
+                                
                             </fieldset>
                         </form>
                     </div>
@@ -118,7 +125,7 @@
                                         <input type="text" name="name" id="name" class="consulta__input">
                                         <i class="consulta__validacion-estado fa-solid fa-circle-xmark"></i>
                                     </div>    
-                                    <p class="consulta__input-error">Ingrese su Nombre y Apellido</p>
+                                    <p class="consulta__input-error">Ingrese su nombre y apellido</p>
                                 </div>
                                 
                                 <div class="consulta__grupo" id="grupo__email__consulta">
@@ -127,28 +134,28 @@
                                         <input type="email" name="email" id="email" class="consulta__input">
                                         <i class="consulta__validacion-estado fa-solid fa-circle-xmark"></i>
                                     </div>
-                                    <p class="consulta__input-error">Ingrese un Email valido</p>
+                                    <p class="consulta__input-error">Ingrese un email v&aacute;lido</p>
                                 </div>
                                 
                                 <div class="input-group">
                                     <label for="message">Tu Consulta</label>
                                     <textarea name="message" id="contact-message" ></textarea>
-                                    <span id="message-error"></span>
+                                
                                 </div>
                                 
                                 <button type="reset" id="button">Borrar</button>
-
+                                
                                 <div class="consulta__grupo consulta__grupo-btn-enviar">
                                     <button type="submit" class="consulta__btn">Enviar</button>
-                                    <p class="consulta__mensaje-exito " id="consulta__mensaje-exito">Consulta enviada exitosamente!</p>
+                                    <p class="consulta__mensaje-exito " id="consulta__mensaje-exito">¡Consulta enviada exitosamente!</p>
                                 </div>
                                 <div class="consulta__mensaje" id="consulta__mensaje">
                                     <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
                                 </div>
-
+                                
                             </fieldset>
-                        </form> 
-                    </div>       
+                        </form>
+                    </div>
                 </div>
             </div>
             
@@ -157,6 +164,10 @@
     </section>
     
     <div id="footer"></div>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> refs/remotes/origin/dev
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
