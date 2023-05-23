@@ -175,9 +175,7 @@ inputs.forEach((input) => {
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 
-	const radio = document.getElementById('radio');
-	if(campos.name && campos.email && campos.street && campos.number && campos.birthdate && campos.petname &&
-        radio.Checked){
+	if(campos.name && campos.email && campos.street && campos.number && campos.birthdate && campos.petname){
 		form.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -245,13 +243,22 @@ inputsCon.forEach((inputCon) => {
 
 });
 
-consulta.addEventListener("submit", (e) => {
-	e.preventDefault();
-
-	if(camposCon.name && camposCon.email){
-            consulta.reset();
-
-		document.getElementById('consulta__mensaje-exito').classList.add('consulta__mensaje-exito-activo');
+/*Mensaje consulta email*/
+    
+async function handleSubmit(event) {
+  event.preventDefault();
+  
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: consulta.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok && camposCon.name && camposCon.email) {
+        consulta.reset();
+        document.getElementById('consulta__mensaje-exito').classList.add('consulta__mensaje-exito-activo');
 		setTimeout(() => {
 			document.getElementById('consulta__mensaje-exito').classList.remove('consulta__mensaje-exito-activo');
 		}, 5000);
@@ -259,13 +266,13 @@ consulta.addEventListener("submit", (e) => {
 		document.querySelectorAll('.consulta__grupo-correcto').forEach((icono) => {
 			icono.classList.remove('consulta__grupo-correcto');
 		});
-	} else {
+
+    } else {
 		document.getElementById('consulta__mensaje').classList.add('consulta__mensaje-activo');
 	}
-});
+  }) ;
+}
+consulta.addEventListener("submit", handleSubmit);
+/*Mensaje consulta email*/
 /*validacion consulta end */
-
-/*Mensaje email*/
-
-
 /* end BODY */

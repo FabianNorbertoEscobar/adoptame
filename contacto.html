@@ -28,8 +28,8 @@
                 </div>
                 <div class="tab-content">
                     <div class="form working" id="form">
-                        <form action="#" method="post" class="adopcion" id="adopcion">
-                            <fieldset class="field" id="formulario" name="formulario" method="get">
+                        <form action="get" method="post" class="adopcion" id="adopcion">
+                            <fieldset class="field" id="formulario">
                             
                                 <h4>Formulario de Adopcion</h4>
                                 
@@ -61,7 +61,7 @@
                                 </div>
 
                                 <div class="formulario__grupo" id="grupo__number">
-                                    <label for="number" class="formulario__label">N&uacute;mero:</label>
+                                    <label for="number" class="formulario__label">N&uacute;mero de Calle:</label>
                                     <div class="formulario__grupo-input">
                                         <input type="text" name="number" id="number" class="formulario__input">
                                         <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
@@ -79,9 +79,9 @@
                                 </div>
                                 
                                 <p>Tipo de mascota:</p>
-                                <input type="radio" name="animal" id="dog radio">
+                                <input type="radio" name="animal" id="dog" class="radio">
                                 <label for="dog">Perro</label>
-                                <input type="radio" name="animal" id="cat radio">
+                                <input type="radio" name="animal" id="cat" class="radio">
                                 <label for="cat">Gato</label>
                                 
                                 <div class="formulario__grupo" id="grupo__petname">
@@ -107,7 +107,8 @@
                     </div>
                     
                     <div class="form">
-                        <form action="get" class="consulta" id="consulta">
+                        <form class="consulta" id="consulta" action="https://formspree.io/f/xvonyepq"
+                        method="POST">
                             <fieldset class="field" id="formulario" name="formulario" method="get">
                                 <h4>Consulta</h4>
                                 
@@ -131,7 +132,7 @@
                                 
                                 <div class="input-group">
                                     <label for="message">Tu Consulta</label>
-                                    <textarea name="message" id="contact-message"></textarea>
+                                    <textarea name="message" id="contact-message" ></textarea>
                                     <span id="message-error"></span>
                                 </div>
                                 
@@ -139,7 +140,7 @@
 
                                 <div class="consulta__grupo consulta__grupo-btn-enviar">
                                     <button type="submit" class="consulta__btn">Enviar</button>
-                                    <p class="consulta__mensaje-exito " id="consulta__mensaje-exito">Formulario enviado exitosamente!</p>
+                                    <p class="consulta__mensaje-exito " id="consulta__mensaje-exito">Consulta enviada exitosamente!</p>
                                 </div>
                                 <div class="consulta__mensaje" id="consulta__mensaje">
                                     <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
@@ -156,7 +157,6 @@
     </section>
     
     <div id="footer"></div>
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
