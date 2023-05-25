@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
     $("#footer").load("footer.html footer");
-
+    
     function getQueryVariable(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
@@ -13,22 +13,22 @@ $(document).ready(function() {
             }
         }
         return null;
-     }
-
-     var petname = getQueryVariable("petname");
-
-     if(petname != null){
-         $("#petname").val(petname);
-
-         var pettype = getQueryVariable("pettype");
-         
+    }
+    
+    var petname = getQueryVariable("petname");
+    
+    if(petname != null){
+        $("#petname").val(petname);
+        
+        var pettype = getQueryVariable("pettype");
+        
         if(pettype == 0){
             $("#cat").prop("checked", true);
         } else if(pettype == 1){
             $("#dog").prop("checked", true);
         }
-     }
-
+    }
+    
 });
 
 /* end FOOTER */
@@ -86,8 +86,6 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
 /* CONTACTO */
 
-/* validacion formulario de adopcion */
-
 let tabs = document.querySelectorAll(".tabs h3");
 let tabContents = document.querySelectorAll(".tab-content .form");
 tabs.forEach((tab, index) => {
@@ -127,24 +125,24 @@ const inputs = document.querySelectorAll("#adopcion input");
 const validarFormulario = (e) => {
     switch (e.target.name) {
         case "name":
-            validarCampo(expresiones.name, e.target, "name");
-            break;
+        validarCampo(expresiones.name, e.target, "name");
+        break;
         case "email":
-            validarCampo(expresiones.email, e.target, "email");
-            break;
+        validarCampo(expresiones.email, e.target, "email");
+        break;
         case "street":
-            validarCampo(expresiones.street, e.target, "street");
-            break;
+        validarCampo(expresiones.street, e.target, "street");
+        break;
         case "number":
-            validarCampo(expresiones.number, e.target, "number");
-            break;
+        validarCampo(expresiones.number, e.target, "number");
+        break;
         case "birthdate":
-            validarCampo(expresiones.birthdate, e.target, "birthdate");
-            validarCumpleaños();
-            break;
+        validarCampo(expresiones.birthdate, e.target, "birthdate");
+        validarCumpleaños();
+        break;
         case "petname":
-            validarCampo(expresiones.petname, e.target, "petname");
-            break;
+        validarCampo(expresiones.petname, e.target, "petname");
+        break;
     }
 }
 
@@ -168,14 +166,14 @@ const validarCampo = (expresion, input, campo) => {
 
 const validarCumpleaños = () => {
     const birthdate = document.getElementById("birthdate");
-
-if (birthdate.value < 18 ){
-    document.getElementById("grupo__birthdate").classList.add("formulario__grupo-incorrecto");
-    document.getElementById("grupo__birthdate").classList.remove("formulario__grupo-correcto");
-    document.querySelector("#grupo__birthdate i").classList.add("fa-circle-xmark");
-    document.querySelector("#grupo__birthdate i").classList.remove("fa-circle-check");
-    document.querySelector("#grupo__birthdate .formulario__input-error").classList.add("formulario__input-error-activo");
-    campos["birthdate"] = false;
+    
+    if (birthdate.value < 18 ){
+        document.getElementById("grupo__birthdate").classList.add("formulario__grupo-incorrecto");
+        document.getElementById("grupo__birthdate").classList.remove("formulario__grupo-correcto");
+        document.querySelector("#grupo__birthdate i").classList.add("fa-circle-xmark");
+        document.querySelector("#grupo__birthdate i").classList.remove("fa-circle-check");
+        document.querySelector("#grupo__birthdate .formulario__input-error").classList.add("formulario__input-error-activo");
+        campos["birthdate"] = false;
     }else{
         document.getElementById("grupo__birthdate").classList.remove("formulario__grupo-incorrecto");
         document.getElementById("grupo__birthdate").classList.add("formulario__grupo-correcto");
@@ -192,27 +190,23 @@ inputs.forEach((input) => {
 });
 
 form.addEventListener("submit", (e) => {
-	e.preventDefault();
-
-	if(campos.name && campos.email && campos.street && campos.number && campos.birthdate && campos.petname){
-		form.reset();
-
-		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
-		}, 5000);
-
-		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('formulario__grupo-correcto');
-		});
-	} else {
-		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-	}
+    e.preventDefault();
+    
+    if(campos.name && campos.email && campos.street && campos.number && campos.birthdate && campos.petname){
+        form.reset();
+        
+        document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+        setTimeout(() => {
+            document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+        }, 5000);
+        
+        document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+            icono.classList.remove('formulario__grupo-correcto');
+        });
+    } else {
+        document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+    }
 });
-
-/* end validacion formulario de adopcion */
-
-/* validacion formulario de consulta */
 
 const expresionesCon = {
     name: /^[a-zA-ZÀ-ÿ]*\s{1}[a-zA-ZÀ-ÿ]*$/,
@@ -230,11 +224,11 @@ const inputsCon = document.querySelectorAll("#consulta input");
 const validarConsulta = (e) => {
     switch (e.target.name) {
         case "name":
-            validarCampoCon(expresiones.name, e.target, "name");
-            break;
+        validarCampoCon(expresiones.name, e.target, "name");
+        break;
         case "email":
-            validarCampoCon(expresiones.email, e.target, "email");
-            break;
+        validarCampoCon(expresiones.email, e.target, "email");
+        break;
     }
 }
 
@@ -261,36 +255,33 @@ inputsCon.forEach((inputCon) => {
     inputCon.addEventListener("blur", validarConsulta);
 });
 
-/*Mensaje consulta email*/
-    
 async function handleSubmit(event) {
-  event.preventDefault();
-  
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: consulta.method,
-    body: data,
-    headers: {
-        'Accept': 'application/json'
-    }
-  }).then(response => {
-    if (response.ok && camposCon.name && camposCon.email) {
-        consulta.reset();
-        document.getElementById('consulta__mensaje-exito').classList.add('consulta__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('consulta__mensaje-exito').classList.remove('consulta__mensaje-exito-activo');
-		}, 5000);
-
-		document.querySelectorAll('.consulta__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('consulta__grupo-correcto');
-		});
-
-    } else {
-		document.getElementById('consulta__mensaje').classList.add('consulta__mensaje-activo');
-	}
-  }) ;
+    event.preventDefault();
+    
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+        method: consulta.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok && camposCon.name && camposCon.email) {
+            consulta.reset();
+            document.getElementById('consulta__mensaje-exito').classList.add('consulta__mensaje-exito-activo');
+            setTimeout(() => {
+                document.getElementById('consulta__mensaje-exito').classList.remove('consulta__mensaje-exito-activo');
+            }, 5000);
+            
+            document.querySelectorAll('.consulta__grupo-correcto').forEach((icono) => {
+                icono.classList.remove('consulta__grupo-correcto');
+            });
+            
+        } else {
+            document.getElementById('consulta__mensaje').classList.add('consulta__mensaje-activo');
+        }
+    }) ;
 }
 consulta.addEventListener("submit", handleSubmit);
-/*Mensaje consulta email*/
-/*validacion consulta end */
-/* end BODY */
+
+/* end CONTACTO */
