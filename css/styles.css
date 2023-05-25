@@ -518,6 +518,24 @@ header, .navbar{
   text-align: justify;
 }
 
+.contacto aside .requisitos-title{
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--fifth-brand-color);
+}
+
+.contacto aside .requisitos-text {
+  display: grid;
+  font-size: 0.8rem;
+}
+
+.contacto aside .requisitos-text b{
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 0.9rem;
+}
+
 @media screen and (max-width: 800px) {
   
   .contacto aside {
