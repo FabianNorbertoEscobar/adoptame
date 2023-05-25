@@ -1196,6 +1196,26 @@ header, .navbar{
   border-radius: 10%;
 }
 
+.youtube-iframe{
+  width: 100% !important;
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2% 0%;
+}
+
+.youtube-iframe iframe{
+  width: 60%;
+  height: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .youtube-iframe iframe{
+    width: 100%;
+  }
+}
+
 /* end home */
 
 /* wsp */

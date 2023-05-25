@@ -39,6 +39,7 @@ $(document).ready(function() {
             const animalImage = document.createElement('img');
 
             animalImage.src = animalimg;
+            animalImage.alt = "dog-image";
 
             animalDiv.appendChild(animalImage);
             animalContainer.appendChild(animalDiv);
