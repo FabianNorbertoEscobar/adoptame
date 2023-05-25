@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Sitio web de adopci&oacute;n de mascotas">
+    <title>Ad&oacute;ptame | Contacto</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/jpg" href="img/favicon/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles.css'>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <section class="page-content">
+        
+        <h2 class="title">Contacto</h2>
+        
+        <section class="contacto">
+            <section class="formularios">
+                
+                <div class="container">
+                    <div class="tabs">
+                        <h3 class="working">Adopci&oacute;n</h3>
+                        <h3>Consulta</h3>
+                    </div>
+                    <div class="tab-content">
+                        <div class="form working" id="form">
+                            <form action="get" method="post" class="adopcion" id="adopcion">
+                                <fieldset class="field" id="formulario">
+                                    
+                                    <h4>Formulario de adopci&oacute;n</h4>
+                                    
+                                    <div class="formulario__grupo" id="grupo__name">
+                                        <label for="name" class="formulario__label">Nombre y apellido:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="name" id="name" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese su nombre y apellido</p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__email">
+                                        <label for="email" class="formulario__label">Email:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="email" name="email" id="email" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese un email v&aacute;lido</p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__street">
+                                        <label for="street" class="formulario__label">Calle:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="street" id="street" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese una calle </p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__number">
+                                        <label for="number" class="formulario__label">N&uacute;mero de Calle:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="number" id="number" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese un n&uacute;mero </p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__birthdate">
+                                        <label for="birthdate" class="formulario__label">Edad:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="number" name="birthdate" id="birthdate" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese su edad (Solo mayor de 18 a&ntilde;os)</p>
+                                    </div>
+                                    
+                                    <p>Tipo de mascota:</p>
+                                    <input type="radio" name="animal" id="dog" class="radio">
+                                    <label for="dog">Perro</label>
+                                    <input type="radio" name="animal" id="cat" class="radio">
+                                    <label for="cat">Gato</label>
+                                    
+                                    <div class="formulario__grupo" id="grupo__petname">
+                                        <label for="petname" class="formulario__label">Nombre de la mascota:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="petname" id="petname" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>   
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese un nombre v&aacute;lido</p>
+                                    </div>
+                                    
+                                    <button type="reset" id="button">Borrar</button>
+                                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                        <button type="submit" class="formulario__btn">Enviar</button>
+                                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Solicitud enviada exitosamente!</p>
+                                    </div>
+                                    <div class="formulario__mensaje" id="formulario__mensaje">
+                                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
+                                    </div>
+                                    
+                                </fieldset>
+                            </form>
+                        </div>
+                        
+                        <div class="form">
+                            <form class="consulta" id="consulta" action="https://formspree.io/f/xvonyepq"
+                            method="POST">
+                            <fieldset class="field" id="formulario" name="formulario" method="get">
+                                <h4>Formulario de consulta</h4>
+                                
+                                <div class="consulta__grupo" id="grupo__name__consulta">
+                                    <label for="name" class="consulta__label">Nombre y apellido:</label>
+                                    <div class="consulta__grupo-input">
+                                        <input type="text" name="name" id="name" class="consulta__input">
+                                        <i class="consulta__validacion-estado fa-solid fa-circle-xmark"></i>
+                                    </div>
+                                    <p class="consulta__input-error">Ingrese su nombre y apellido</p>
+                                </div>
+                                
+                                <div class="consulta__grupo" id="grupo__email__consulta">
+                                    <label for="email" class="consulta__label">Email:</label>
+                                    <div class="consulta__grupo-input">
+                                        <input type="email" name="email" id="email" class="consulta__input">
+                                        <i class="consulta__validacion-estado fa-solid fa-circle-xmark"></i>
+                                    </div>
+                                    <p class="consulta__input-error">Ingrese un email v&aacute;lido</p>
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="message">Tu Consulta</label>
+                                    <textarea name="message" id="contact-message" ></textarea>
+                                    
+                                </div>
+                                
+                                <button type="reset" id="button">Borrar</button>
+                                
+                                <div class="consulta__grupo consulta__grupo-btn-enviar">
+                                    <button type="submit" class="consulta__btn">Enviar</button>
+                                    <p class="consulta__mensaje-exito " id="consulta__mensaje-exito">¡Consulta enviada exitosamente!</p>
+                                </div>
+                                <div class="consulta__mensaje" id="consulta__mensaje">
+                                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
+                                </div>
+                                
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <div class="requisitos-title">
+                Requisitos de adopci&oacute;n
+            </div>
+            <div class="text requisitos-text">
+                
+                <b>Amor y responsabilidad:</b>
+                
+                Ten&eacute;s que tener mucho amor para dar y tambi&eacute;n responsabilidad ya que una mascota
+                es tan importante como tus hijxs.
+                
+                <b>Edad m&iacute;nima:</b>
+                
+                Debes tener al menos 18 a&ntilde;os.
+                
+                <b>Formulario de adopci&oacute;n:</b>
+                
+                Debes llenar el formulario de adopci&oacute;n de esta p&aacute;gina. En caso de que vayas presencialmente
+                nuestro refugio, tambi&eacute;n te pediremos que lo completes, ya que con &eacute;l registramos tus datos en el sistema.
+                
+                <b>Verificaci&oacute;n de antecedentes:</b>
+                
+                Realizaremos una verificaci&oacute;n de antecedentes para asegurarnos de que no hayas sido
+                condenado por maltrato animal u otros delitos relacionados, como violencia de g&eacute;nero,
+                incumplimiento de cuota alimentaria, disturbios en la v&iacute;a p&uacute;blica, etc.
+                Debemos velar por la seguridad y bienestar de los animales de nuestro refugio.
+                
+                <b>Conocimiento presencial de la mascota:</b>
+                
+                Te invitaremos al refugio para conocerte y que tengas un primer contacto con la mascota,
+                y que nos confirmes tu inter&eacute;s por ella.
+                
+                <b>Entrevista y visita al hogar:</b>
+                
+                Te vamos a realizar una entrevista para conocerte a vos, a tu personalidad, tu familia, el
+                hogar d&oacute;nde ir&aacute; la mascota, tus motivaciones y tus planes para ella.
+                
+                <b>Contrato de adopci&oacute;n:</b>
+                
+                Te vamos a pedir que firmes un acuerdo de adopci&oacute;n en el que aceptes cumplir con ciertas 
+                condiciones y responsabilidades como propietario de la mascota.
+                
+                <b>Visitas peri&oacute;dicas post adopci&oacute;n:</b>
+                
+                Te visitaremos y controlaremos las condiciones en las que vive la mascota, si se ha adaptado a tu familia y su estado de salud.
+                Si no se cumplieses todo lo acordado en el contrato de adopci&oacute;n, te retiraremos la mascota,
+                se la daremos en adopci&oacute;n a otra familia y de ser pertinente, te multaremos.
+            </div>
+        </aside>
+        
+        <section class="contrato">
+            <div class="contrato-title">
+                Contrato de adopci&oacute;n
+            </div>
+            <div class="text contrato-text">
+                En t&eacute;rminos generales, el contrato que ten&eacute;s que firmar, define condiciones
+                sobre los siguientes temas:
+                
+                <b>Requisitos de adopci&oacute;n:</b>
+                Se detallan los requisitos que debes cumplir para ser considerado
+                como adoptante, como la edad m&iacute;nima, la estabilidad del hogar y la capacidad de proporcionar
+                el cuidado adecuado a la mascota.
+                
+                <b>Responsabilidades del adoptante:</b>
+                Se describen las responsabilidades que asumes como adoptante,
+                como proporcionar alimentaci&oacute;n, cuidado veterinario adecuado, ejercicio, atenci&oacute;n y un entorno seguro para la mascota.
+                
+                <b>Restricciones y condiciones:</b>
+                Pueden existir restricciones espec&iacute;ficas en cuanto a la adopci&oacute;n,
+                como la prohibici&oacute;n de criar o reproducir a la mascota, la prohibici&oacute;n de transferir la propiedad sin el consentimiento de la organizaci&oacute;n, entre otras condiciones.
+                
+                <b>Costos y tarifas:</b>
+                Se establecen los costos asociados a la adopci&oacute;n, como la tarifa de adopci&oacute;n,
+                que puede cubrir los gastos de esterilizaci&oacute;n/esterilizaci&oacute;n, vacunas, microchip, entre otros.
+                Son muy particulares los casos en que se estipula una tarifa; algunos de ellos son que se trate
+                de un animal enfermo o de raza o que tengas alg&uacute;n antecedente menor o cierto incumplimiento de
+                alguna de nuestras pol&iacute;ticas en una adopci&oacute;n anterior.
+                
+                <b>Pol&iacute;ticas de devoluci&oacute;n:</b>
+                Se explica el proceso en caso de que no puedas continuar cuidando de la
+                mascota y necesites devolverla, incluyendo cualquier pol&iacute;tica de reembolso que pueda aplicar.
+                
+                <b>Protecci&oacute;n y bienestar de la mascota:</b>
+                Se hacen referencia a los derechos de la organizaci&oacute;n para
+                verificar las condiciones del hogar y el bienestar de la mascota despu&eacute;s de la adopci&oacute;n, as&iacute;
+                como la posibilidad de visitas de seguimiento.
+            </div>
+        </section>
+    </section>
+    
+</section>
+
+</body>
+
+<a href="https://api.whatsapp.com/send?phone=5491111111111" class="whatsapp-float" target="_blank">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
+<div id="footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+
+</html>
