@@ -29,6 +29,25 @@ $(document).ready(function() {
         }
     }
     
+    const animalContainer = document.getElementById('api-animal-container');
+
+    fetch('https://dog.ceo/api/breeds/image/random/6')
+    .then(response => response.json())
+    .then(data => {
+        data.message.forEach(animalimg => {
+            const animalDiv = document.createElement('div');
+            const animalImage = document.createElement('img');
+
+            animalImage.src = animalimg;
+
+            animalDiv.appendChild(animalImage);
+            animalContainer.appendChild(animalDiv);
+        });
+    })
+    .catch(error => {
+        console.log('Error al obtener los datos de la API:', error);
+    });
+
 });
 
 /* end FOOTER */
@@ -285,3 +304,4 @@ async function handleSubmit(event) {
 consulta.addEventListener("submit", handleSubmit);
 
 /* end CONTACTO */
+

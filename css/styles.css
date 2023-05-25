@@ -1171,6 +1171,31 @@ header, .navbar{
   }
 }
 
+#api-animal-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+#api-animal-container div{
+  width: 100%;
+  background-size: cover;
+  text-align: center;
+}
+
+#api-animal-container div img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid var(--fifth-brand-color);
+  border-radius: 5%;
+}
+
+#api-animal-container div img:hover{
+  border: 3px solid var(--second-brand-color);
+  border-radius: 10%;
+}
+
 /* end home */
 
 /* wsp */
