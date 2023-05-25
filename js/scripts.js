@@ -39,6 +39,7 @@ $(document).ready(function() {
             const animalImage = document.createElement('img');
 
             animalImage.src = animalimg;
+            animalImage.alt = "dog-image";
 
             animalDiv.appendChild(animalImage);
             animalContainer.appendChild(animalDiv);
@@ -71,6 +72,9 @@ document.getElementById("header").innerHTML = `
             </li>
             <li class="list-item">
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
+            </li>
+            <li class="list-item">
+                <a href="adoptados.html" class="nav-link">Adoptados</a>
             </li>
             <li class="list-item">
                 <a href="faq.html" class="nav-link">FAQ</a>

@@ -23,11 +23,6 @@ Adóptame es un sitio web de adopción de animales (perros y gatos), donde se pu
 * Fabián Norberto Escobar ([FabianNorbertoEscobar](https://github.com/FabianNorbertoEscobar))<br>
 * Camila Viñas Velázquez ([danicrystal](https://github.com/danicrystal))<br>
 * Florencia Laass ([FlorLaass](https://github.com/FlorLaass))<br>
-* Ignacio Martín Carrera ([imnacho2000](https://github.com/imnacho2000))<br>
-
-<a href = "https://github.com/FabianNorbertoEscobar/adoptame/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=FabianNorbertoEscobar/adoptame"/>
-</a>
 
 #### Tecnología utilizada
 * HTML

@@ -491,7 +491,7 @@ header, .navbar{
   }
   
   .nosotros-img{
-    width: 60%;
+    width: 70%;
   }
   
 }
@@ -706,9 +706,11 @@ header, .navbar{
   height: 2em;
   border: none;
 }
+
 .field button[type="submit"]{
   margin-bottom: 0.5em;
 }
+
 .field input:focus{
   border: 3px solid var(--fourth-brand-color);
   outline: none;
@@ -723,9 +725,19 @@ header, .navbar{
 .field input[type=number] {
   -moz-appearance: textfield;
 }
+
 .field button:hover{
   background-color: var(--second-brand-color);
   cursor: pointer;
+}
+
+.formulario__grupo, .consulta__grupo, .input-group{
+  margin-top: 12px;
+  margin-bottom:6px;
+}
+
+.formulario__input, .consulta__input{
+  margin-top: 10px;
 }
 
 .formulario__grupo-input,
@@ -739,10 +751,12 @@ header, .navbar{
   margin-bottom: 0;
   display: none;
 }
+
 .formulario__input-error-activo,
 .consulta__input-error-activo{
   display: block;
 }
+
 .formulario__validacion-estado,
 .consulta__validacion-estado{
   position: absolute;
@@ -1196,6 +1210,26 @@ header, .navbar{
   border-radius: 10%;
 }
 
+.youtube-iframe{
+  width: 100% !important;
+  display: flex;
+  flex-basis: 30%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2% 0%;
+}
+
+.youtube-iframe iframe{
+  width: 60%;
+  height: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .youtube-iframe iframe{
+    width: 100%;
+  }
+}
+
 /* end home */
 
 /* wsp */
@@ -1226,3 +1260,37 @@ header, .navbar{
 }
 
 /* end wsp */
+
+/* adoptados */
+
+.adoptados-experiencias div {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 3rem;
+}
+
+.adoptados-experiencias div:nth-of-type(1){
+  background-color: var(--seventh-brand-color);
+}
+
+.adoptados-experiencias div:nth-of-type(2){
+  background-color: var(--sixth-brand-color);
+}
+
+.adoptados-experiencias div:nth-of-type(3){
+  background-color: var(--second-brand-color);
+}
+
+.adoptados-experiencias div:nth-of-type(4){
+  margin-top: 0px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .adoptados-experiencias .refugios-img .nosotros-img{
+    width: 90%;
+    border-radius: 0%;
+  }
+}
+
+/* end adoptados */
