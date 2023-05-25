@@ -1246,3 +1246,25 @@ header, .navbar{
 }
 
 /* end wsp */
+
+/* adoptados */
+
+.adoptados-experiencias div {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 3rem;
+}
+
+.adoptados-experiencias div:nth-of-type(1){
+  background-color: var(--seventh-brand-color);
+}
+
+.adoptados-experiencias div:nth-of-type(2){
+  background-color: var(--sixth-brand-color);
+}
+
+.adoptados-experiencias div:nth-of-type(3){
+  background-color: var(--second-brand-color);
+}
+
+/* end adoptados */

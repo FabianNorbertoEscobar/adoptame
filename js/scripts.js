@@ -74,6 +74,9 @@ document.getElementById("header").innerHTML = `
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
             </li>
             <li class="list-item">
+                <a href="adoptados.html" class="nav-link">Adoptados</a>
+            </li>
+            <li class="list-item">
                 <a href="faq.html" class="nav-link">FAQ</a>
             </li>
             <li class="list-item">
