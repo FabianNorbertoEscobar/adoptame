@@ -1047,22 +1047,9 @@ header, .navbar{
   }
 }
 
-.borde-interno{
-  position: relative;
-}
-
-.borde-interno:before {
-  position: absolute;
-  border:  2px solid whitesmoke;
-  top: 4px;
-  bottom: 4px;
-  left:  4px;
-  right: 4px;
-  opacity: 0;
-}
-
-.borde-interno:hover:before {
-  opacity: 1;
+.iluminacion:hover{
+  background-color: whitesmoke;
+  color: black;
 }
 
 /* end animaciones */
@@ -1124,6 +1111,64 @@ header, .navbar{
 .btnAdoptar:hover{
   background-color: var(--second-brand-color);
   cursor: pointer;
+}
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  color: whitesmoke;
+}
+
+.actions-grid .actions-img img{
+  width: 100%;
+  height: 80%;
+}
+
+.actions-text{
+  position: relative;
+  padding: 0.7rem 1rem;
+  text-align: justify;
+  font-size: 0.8rem;
+  background-color: var(--fifth-brand-color);
+  margin-bottom: 1rem;
+  bottom: 15%;
+}
+
+.actions-text div{
+  text-align: center;;
+}
+
+.actions-text span{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1020px) {
+  .actions-grid {
+    display: block;
+  }
+
+  .actions-grid .actions-img{
+    text-align: center;
+    margin: 2% 0%;
+  }
+  
+  .actions-grid .actions-img img{
+    width: 100%;
+    height: 2%;
+  }
+
+  .actions-grid div:nth-of-type(1) {
+    display: none;
+  }
+
+  .actions-grid div:nth-of-type(2) {
+    display: none;
+  }
+
+  .actions-text div{
+    display: block !important;
+  }
 }
 
 /* end home */
