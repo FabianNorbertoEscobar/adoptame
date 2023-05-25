@@ -600,7 +600,7 @@ input[type="number"] {
 
 .field textarea {
   min-height: 8em;
-  min-width: 100%;
+  width: 100%;
   padding: 0.5;
   border: solid 1px whitesmoke;
   resize: vertical;
@@ -749,6 +749,9 @@ button[type="reset"] {
   .secondary-icon {
     display: none;
   }
+  .container {
+    width : 100%;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -795,7 +798,15 @@ button[type="reset"] {
   .active {
     display: block;
   }
+<<<<<<< HEAD
 
+=======
+  
+  .container {
+    width : 100%;
+  }
+  
+>>>>>>> 80da6038084b4e78660426bc667cc73fc5025866
 }
 
 /* end contacto /*
@@ -1313,9 +1324,23 @@ button[type="reset"] {
   grid-template-columns: auto auto;
   margin-left: 3em;
   }
+<<<<<<< HEAD
 
  .borde-interno {
   padding: 1em;
+=======
+  .imagen1{
+    background-image: url(../img/home/adoptados/perros.webp);
+    background-size: cover;
+  }
+  .imagen2{
+    background-image: url(../img/home/adoptados/gatos.jpg);
+    background-size: cover;
+  }
+  .imagen3{
+    background-image: url(../img/home/adoptados/rescatados.jpg);
+    background-size: cover;
+>>>>>>> 80da6038084b4e78660426bc667cc73fc5025866
   }
 
  #ocultar {

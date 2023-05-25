@@ -19,6 +19,14 @@ $(document).ready(function() {
 
      if(petname != null){
          $("#petname").val(petname);
+
+         var pettype = getQueryVariable("pettype");
+         
+        if(pettype == 0){
+            $("#cat").prop("checked", true);
+        } else if(pettype == 1){
+            $("#dog").prop("checked", true);
+        }
      }
 
 });
