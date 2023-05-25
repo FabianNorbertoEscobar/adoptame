@@ -595,7 +595,7 @@ header, .navbar{
 
 .field textarea{
   min-height: 8em;
-  min-width: 100%;
+  width: 100%;
   padding: 0.5;
   border:solid 1px whitesmoke;
   resize: vertical;
@@ -738,6 +738,9 @@ header, .navbar{
   .secondary-icon{
     display: none;
   }
+  .container {
+    width : 100%;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -783,6 +786,10 @@ header, .navbar{
   
   .active{
     display: block;
+  }
+  
+  .container {
+    width : 100%;
   }
   
 }
