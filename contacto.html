@@ -20,95 +20,96 @@
         <h2 class="title">Contacto</h2>
         
         <section class="contacto">
-            
-            <div class="container">
-                <div class="tabs">
-                    <h3 class="working">Adopci&oacute;n</h3>
-                    <h3>Consulta</h3>
-                </div>
-                <div class="tab-content">
-                    <div class="form working" id="form">
-                        <form action="get" method="post" class="adopcion" id="adopcion">
-                            <fieldset class="field" id="formulario">
-                            
-                                <h4>Formulario de adopci&oacute;n</h4>
-                                
-                                <div class="formulario__grupo" id="grupo__name">
-                                    <label for="name" class="formulario__label">Nombre y apellido:</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="text" name="name" id="name" class="formulario__input">
-                                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                                    </div>
-                                    <p class="formulario__input-error">Ingrese su nombre y apellido</p>
-                                </div>
-                                
-                                <div class="formulario__grupo" id="grupo__email">
-                                    <label for="email" class="formulario__label">Email:</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="email" name="email" id="email" class="formulario__input">
-                                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                                    </div>
-                                    <p class="formulario__input-error">Ingrese un email v&aacute;lido</p>
-                                </div>
-                                
-                                <div class="formulario__grupo" id="grupo__street">
-                                    <label for="street" class="formulario__label">Calle:</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="text" name="street" id="street" class="formulario__input">
-                                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                                    </div>
-                                    <p class="formulario__input-error">Ingrese una calle </p>
-                                </div>
-                                
-                                <div class="formulario__grupo" id="grupo__number">
-                                    <label for="number" class="formulario__label">N&uacute;mero de Calle:</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="text" name="number" id="number" class="formulario__input">
-                                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
-                                    </div>
-                                    <p class="formulario__input-error">Ingrese un n&uacute;mero </p>
-                                </div>
-                                
-                                <div class="formulario__grupo" id="grupo__birthdate">
-                                    <label for="birthdate" class="formulario__label">Edad:</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="number" name="birthdate" id="birthdate" class="formulario__input">
-                                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
-                                    </div>
-                                    <p class="formulario__input-error">Ingrese su edad (Solo mayor de 18 a&ntilde;os)</p>
-                                </div>
-                                
-                                <p>Tipo de mascota:</p>
-                                <input type="radio" name="animal" id="dog" class="radio">
-                                <label for="dog">Perro</label>
-                                <input type="radio" name="animal" id="cat" class="radio">
-                                <label for="cat">Gato</label>
-                                
-                                <div class="formulario__grupo" id="grupo__petname">
-                                    <label for="petname" class="formulario__label">Nombre de la mascota:</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="text" name="petname" id="petname" class="formulario__input">
-                                        <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>   
-                                    </div>
-                                    <p class="formulario__input-error">Ingrese un nombre v&aacute;lido</p>
-                                </div>
-                                
-                                <button type="reset" id="button">Borrar</button>
-                                <div class="formulario__grupo formulario__grupo-btn-enviar">
-                                    <button type="submit" class="formulario__btn">Enviar</button>
-                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Solicitud enviada exitosamente!</p>
-                                </div>
-                                <div class="formulario__mensaje" id="formulario__mensaje">
-                                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
-                                </div>
-                                
-                            </fieldset>
-                        </form>
+            <section class="formularios">
+                
+                <div class="container">
+                    <div class="tabs">
+                        <h3 class="working">Adopci&oacute;n</h3>
+                        <h3>Consulta</h3>
                     </div>
-                    
-                    <div class="form">
-                        <form class="consulta" id="consulta" action="https://formspree.io/f/xvonyepq"
-                        method="POST">
+                    <div class="tab-content">
+                        <div class="form working" id="form">
+                            <form action="get" method="post" class="adopcion" id="adopcion">
+                                <fieldset class="field" id="formulario">
+                                    
+                                    <h4>Formulario de adopci&oacute;n</h4>
+                                    
+                                    <div class="formulario__grupo" id="grupo__name">
+                                        <label for="name" class="formulario__label">Nombre y apellido:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="name" id="name" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese su nombre y apellido</p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__email">
+                                        <label for="email" class="formulario__label">Email:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="email" name="email" id="email" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese un email v&aacute;lido</p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__street">
+                                        <label for="street" class="formulario__label">Calle:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="street" id="street" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese una calle </p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__number">
+                                        <label for="number" class="formulario__label">N&uacute;mero de Calle:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="number" id="number" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i> 
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese un n&uacute;mero </p>
+                                    </div>
+                                    
+                                    <div class="formulario__grupo" id="grupo__birthdate">
+                                        <label for="birthdate" class="formulario__label">Edad:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="number" name="birthdate" id="birthdate" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese su edad (Solo mayor de 18 a&ntilde;os)</p>
+                                    </div>
+                                    
+                                    <p>Tipo de mascota:</p>
+                                    <input type="radio" name="animal" id="dog" class="radio">
+                                    <label for="dog">Perro</label>
+                                    <input type="radio" name="animal" id="cat" class="radio">
+                                    <label for="cat">Gato</label>
+                                    
+                                    <div class="formulario__grupo" id="grupo__petname">
+                                        <label for="petname" class="formulario__label">Nombre de la mascota:</label>
+                                        <div class="formulario__grupo-input">
+                                            <input type="text" name="petname" id="petname" class="formulario__input">
+                                            <i class="formulario__validacion-estado fa-solid fa-circle-xmark"></i>   
+                                        </div>
+                                        <p class="formulario__input-error">Ingrese un nombre v&aacute;lido</p>
+                                    </div>
+                                    
+                                    <button type="reset" id="button">Borrar</button>
+                                    <div class="formulario__grupo formulario__grupo-btn-enviar">
+                                        <button type="submit" class="formulario__btn">Enviar</button>
+                                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Solicitud enviada exitosamente!</p>
+                                    </div>
+                                    <div class="formulario__mensaje" id="formulario__mensaje">
+                                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Rellene el formulario correctamente. </p>
+                                    </div>
+                                    
+                                </fieldset>
+                            </form>
+                        </div>
+                        
+                        <div class="form">
+                            <form class="consulta" id="consulta" action="https://formspree.io/f/xvonyepq"
+                            method="POST">
                             <fieldset class="field" id="formulario" name="formulario" method="get">
                                 <h4>Formulario de consulta</h4>
                                 
@@ -133,7 +134,7 @@
                                 <div class="input-group">
                                     <label for="message">Tu Consulta</label>
                                     <textarea name="message" id="contact-message" ></textarea>
-                                
+                                    
                                 </div>
                                 
                                 <button type="reset" id="button">Borrar</button>
@@ -151,16 +152,19 @@
                     </div>
                 </div>
             </div>
-            
         </section>
-        
+        <aside>
+            Requisitos de adopci&oacute;n
+        </aside>
     </section>
     
-    <div id="footer"></div>
-    
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    
+</section>
+
+<div id="footer"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+
 </body>
 </html>

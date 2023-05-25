@@ -443,67 +443,6 @@ header, .navbar{
   margin-bottom: 4px;
 }
 
-.container{
-  width: 30em;
-  position: relative;
-  transform: translateX(-50%);
-  left: 50%;
-  background-color: var(--fifth-brand-color);
-  box-shadow: 0 20px 40px rgb(black, 0.2);
-  z-index: 0;
-  margin-top: 30px;
-}
-
-.tabs{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.tabs h3{
-  background-color: var(--second-brand-color);
-  text-align: center;
-  padding: 15px 0;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.tabs h3:hover{
-  background-color: var(--sixth-brand-color);
-}
-
-.tab-content{
-  background-color: var(--fifth-brand-color);
-  padding: 50px 40px;
-}
-
-.tab-content h4{
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: whitesmoke;
-  font-weight: 600;
-}
-
-.tab-content p{
-  text-align: justify;
-  line-height: 1.9;
-  letter-spacing: 0.4px;
-  color: whitesmoke;
-}
-
-.tab-content .form{
-  display: none;
-  overflow:hidden
-}
-
-.tab-content .working{
-  display: block;
-}
-
-.tabs .working{
-  background-color: var(--fifth-brand-color);
-  color: whitesmoke;
-}
-
 /* end header */
 
 /* nosotros */
@@ -560,6 +499,97 @@ header, .navbar{
 /* end nosotros */
 
 /* contacto */
+
+.contacto{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.formularios{
+  width: 58%;
+  margin-right: 2%;
+}
+
+.contacto aside {
+  background-color: var(--sixth-brand-color);
+  width: 40%;
+  padding: 3%;
+  text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+  
+  .contacto aside {
+    display: block;
+    width: 100%;
+    margin-top: 2%;
+  }
+  
+  .formularios{
+    width: 100%;
+    margin-right: 0%;
+  }
+  
+}
+
+.container{
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: var(--fifth-brand-color);
+  box-shadow: 0 20px 40px rgb(black, 0.2);
+}
+
+.tabs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tabs h3{
+  background-color: var(--second-brand-color);
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs h3:hover{
+  background-color: var(--sixth-brand-color);
+}
+
+.tab-content{
+  background-color: var(--fifth-brand-color);
+  padding: 50px 40px;
+}
+
+.tab-content h4{
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: whitesmoke;
+  font-weight: 600;
+}
+
+.tab-content p{
+  text-align: justify;
+  line-height: 1.9;
+  letter-spacing: 0.4px;
+  color: whitesmoke;
+}
+
+.tab-content .form{
+  display: none;
+  overflow:hidden
+}
+
+.tab-content .working{
+  display: block;
+}
+
+.tabs .working{
+  background-color: var(--fifth-brand-color);
+  color: whitesmoke;
+}
 
 .field{
   margin: 2em 0;
@@ -901,12 +931,6 @@ header, .navbar{
 }
 
 /* end faq */
-
-/* requisitos de adopcion */
-
-
-
-/* end requisitos de adopcion */
 
 /* home */
 
