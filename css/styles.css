@@ -1281,4 +1281,16 @@ header, .navbar{
   background-color: var(--second-brand-color);
 }
 
+.adoptados-experiencias div:nth-of-type(4){
+  margin-top: 0px;
+  padding: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .adoptados-experiencias .refugios-img .nosotros-img{
+    width: 90%;
+    border-radius: 0%;
+  }
+}
+
 /* end adoptados */
