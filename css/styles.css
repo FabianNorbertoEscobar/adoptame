@@ -978,319 +978,6 @@ header, .navbar{
 
 /* end faq */
 
-/* home */
-
-.contenedorgrid{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto;
-}
-
-.card{
-  background-color: var(--third-brand-color);
-  width: 330px;
-  border: 1px solid whitesmoke;
-  transition-duration: 0.2s;
-}
-
-.card img{
-  background-color: whitesmoke;
-  width: 250px;
-  height: 250px;
-  margin-top: 15px;
-  margin-left: 50px;
-  background-size: cover;
-  border: 5px solid whitesmoke;
-  border-radius: 50%;
-}
-
-.card img:hover{
-  border: 5px solid var(--second-brand-color);
-}
-
-.card .card-main h6{
-  text-align: center;
-  color: var(--fourth-brand-color);
-  font-size: 1.4em;
-}
-
-.card p{
-  text-align: center;
-}
-
-.animal-name{
-  color: gray;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.card-main{
-  width: 300px;
-  margin-left: 20px;
-}
-
-.grid-container{
-  display: grid;
-  background-color: whitesmoke;
-  grid-template-columns: auto auto auto;
-}
-
-.grid-container div{
-  background-color: var(--fifth-brand-color);
-  border: 1px solid whitesmoke;
-  text-align: center;
-  margin: 3px;
-  height: 425px;
-  width: 437px;
-  color: whitesmoke;
-}
-
-.imagen1{
-  background-image: url(../img/home/adoptados/perros.webp);
-  background-size: cover;
-}
-
-.imagen2{
-  background-image: url(../img/home/adoptados/gatos.jpg);
-  background-size: cover;
-}
-
-.imagen3{
-  background-image: url(../img/home/adoptados/rescatados.jpg);
-  background-size: cover;
-}
-
-.adoptados-main {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-}
-
-.panel-a{
-  background-color: var(--second-brand-color);
-  color: whitesmoke;
-  grid-column: 1/3;
-  text-align: justify;
-  height: 375px;
-  margin: 10px;
-  padding: 10px;
-}
-
-.panel-b{
-  background-color: var(--seventh-brand-color);
-  grid-column: 1/3;
-  text-align: left;
-  height: 375px;
-  display: inline-flex;
-  margin: 10px;
-  font-size: medium;
-}
-
-.sub-a{
-  background-color: var(--third-brand-color);
-  height: 375px;
-  width: 50%;
-}
-
-.sub-b{
-  background-color: var(--sixth-brand-color);
-  height: 375px;
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-  padding-right: 30px;
-}
-
-.panel-c{
-  background-color: var(--seventh-brand-color);
-  grid-column: 1/2;
-  text-align: justify;
-  height: 375px;
-  padding: 20px;
-  margin: 10px;
-}
-
-.panel-e{
-  background-color: var(--fifth-brand-color);
-  grid-column: 2/3;
-  text-align: justify;
-  height: 375px;
-  border-radius: 5%;
-  margin: 10px;
-}
-
-.panel-f{
-  background-color: var(--sixth-brand-color);
-  grid-column: 1/3;
-  text-align: justify;
-  height: 375px;
-  display: inline-flex;
-  font-size: small;
-  text-align: center;
-  margin: 10px;
-}
-
-.adoptados-base{
-  background-color: var(--seventh-brand-color);
-  color: black;
-  grid-column: 1/3;
-  grid-row: 5/7;
-  padding: 40px;
-  margin: 10px;
-  font-size: small;
-  text-align: justify;
-}
-
-.adoptados-texto{
-  margin: 50px;
-  margin-top: 5px;
-  font-size:medium;
-  text-align: justify;
-}
-
-.foto{
-  margin-top: 60px;
-}
-
-.panel{
-  background-color: whitesmoke;
-  width: 650px;
-  height: 850px;
-  border: 1px solid whitesmoke;
-  text-align: justify;
-}
-
-
-.adoptados img{
-  background-color: whitesmoke;
-  width: 250px;
-  height: 250px;
-  margin-top: 15px;
-  margin-left: 50px;
-  background-size: cover;
-  border: 10px solid whitesmoke ;
-  border-radius: 50%;
-}
-
-.animal-name{
-  color: gray;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.card-main{
-  width: 300px;
-  margin-left: 20px;
-}
-
-.centrar{
-  text-align: center;
-}
-
-.btnAdoptar{
-  margin: 0.8em 0em;
-  padding: 0.7em;
-  border-radius: 4%;
-  background-color: var(--fourth-brand-color);
-  color:whitesmoke;
-  font-size: .9em;
-  width: 80%;
-  text-decoration: none;
-  text-align: center;
-}
-
-.btnAdoptar:hover{
-  background-color: var(--second-brand-color);
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 600px){
-  .contenedorgrid{
-    display: flex;
-    flex-direction: column;
-  }
-  .card{
-    width: 600px;
-    height: 800px;
-    padding-left: 110px;
-    margin-left: 20px;
-  }
-  .imagen1{
-    background-image: url(../img/home/tarjetas/MediaQueries/prueba2.webp);
-    background-size: cover;
-  }
-  .imagen2{
-    background-image: url(../img/home/tarjetas/MediaQueries/Adoptame4.avif);
-    background-size: cover;
-  }
-  .imagen3{
-    background-image: url(../img/home/tarjetas/MediaQueries/rescatita3.jpg);
-    background-size: cover;
-  }
-  .grid-container{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    margin-left: 50px;
-  }
-}
-
-@media only screen and (min-width: 600px){
-  .contenedorgrid{
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  .card{
-    height: 700px;
-  }
-  .grid-container{
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-  }
-  .imagen1{
-    background-image: url(../img/home/tarjetas/MediaQueries/prueba2.webp);
-    background-size: cover;
-  }
-  .imagen2{
-    background-image: url(../img/home/tarjetas/MediaQueries/Adoptame4.avif);
-    background-size: cover;
-  }
-  .imagen3{
-    background-image: url(../img/home/tarjetas/MediaQueries/rescatita3.jpg);
-    background-size: cover;
-  }
-}
-
-@media only screen and (min-width: 800px){
-  .contenedorgrid{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto;
-  }
-  .grid-container{
-    display: grid;
-    background-color: whitesmoke;
-    grid-template-columns: auto auto auto;
-    margin-left: 0;
-  }
-  .imagen1{
-    background-image: url(../img/home/adoptados/perros.webp);
-    background-size: cover;
-  }
-  .imagen2{
-    background-image: url(../img/home/adoptados/gatos.jpg);
-    background-size: cover;
-  }
-  .imagen3{
-    background-image: url(../img/home/adoptados/rescatados.jpg);
-    background-size: cover;
-  }
-}
-
-/* end home */
-
 /* animaciones */
 
 .sombra:hover{
@@ -1379,3 +1066,64 @@ header, .navbar{
 }
 
 /* end animaciones */
+
+/* home */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.animal-card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.animal-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid var(--fifth-brand-color);
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.animal-card img:hover{
+  border: 5px solid var(--second-brand-color);
+}
+
+.animal-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  color: var(--fifth-brand-color)
+}
+
+.animal-card p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.btnAdoptar{
+  display: inline-block;
+  margin: 0.8rem 0em;
+  padding: 0.7em 0.3em;
+  border-radius: 4px;
+  background-color: var(--fourth-brand-color);
+  color:whitesmoke;
+  font-size: .9em;
+  width: 80%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btnAdoptar:hover{
+  background-color: var(--second-brand-color);
+  cursor: pointer;
+}
+
+/* end home */
