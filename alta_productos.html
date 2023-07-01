@@ -12,8 +12,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel='stylesheet' type='text/css' media='screen' href='css/styles_admin.css'>
-</head>
 
+    <script>
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+        var username = localStorage.getItem('username');
+
+        if (!isLoggedIn) {
+            location.href = 'login.html';
+        }
+    </script>
+</head>
 
 <body>
     <div id="header_admin"></div>
@@ -36,6 +44,7 @@
         <button type="submit">Agregar Producto</button>
         <a href="admin.html">Men&uacute; principal</a>
     </form>
+
     <script>
         const URL = "http://127.0.0.1:5000/"
         // const URL = "https://fabianescobar.pythonanywhere.com/"
