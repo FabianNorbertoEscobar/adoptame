@@ -2,17 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventario</title>
-    <script src="https://unpkg.com/vue@next"></script>
-    <link rel="stylesheet" href="../css/styles_admin.css">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Sitio web de adopci&oacute;n de mascotas">
+    <title>Ad&oacute;ptame - Admin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/jpg" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles_admin.css'>
 </head>
 
 <body>
+
+    <div id="header_admin"></div>
+
     <div id="app">
-        <h1>Carrito de compras</h1>
-        <h3>Codo a Codo 2023</h3>
+        <h3>Carrito de compras</h3><br>
+
         <table>
             <thead>
                 <tr>
@@ -36,9 +44,10 @@
                 </tr>
             </tbody>
         </table>
-
+        <br>
         <div v-if="mostrarCarrito">
-            <h3>Productos en el carrito:</h3>
+            <h3>Productos en el carrito</h3>
+            <br>
             <table>
                 <thead>
                     <tr>
@@ -58,20 +67,20 @@
                 </tbody>
             </table>
         </div>
-
+        <br>
         <div v-if="!mostrarCarrito" class="contenedor-centrado">
             <button @click="obtenerCarrito">Mostrar carrito</button>
         </div>
-
+        <br>
         <div class="contenedor-centrado">
-            <a href="admin.html">Menu principal</a>
+            <a href="admin.html">Men&uacute; principal</a>
         </div>
 
     </div>
 
     <script>
         const URL = "http://127.0.0.1:5000/"
-        //const URL = "https://juanpablocodo.pythonanywhere.com/"
+        //const URL = "https://fabianescobar.pythonanywhere.com/"
 
         const app = Vue.createApp({
             data() {
@@ -152,6 +161,14 @@
         })
         app.mount('#app')
     </script>
+
+    <div id="footer_admin"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
+    <script src="js/scripts_admin.js"></script>
+
 </body>
 
 </html>
