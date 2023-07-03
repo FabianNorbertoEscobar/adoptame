@@ -2,6 +2,17 @@
 
 $(document).ready(function() {
     $("#footer_admin").load("footer_admin.html footer");
+
+    $('.logout-btn').on('click', function() {
+        logout();
+    });
+
+    function logout(){
+        this.isLoggedIn = false;
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('username');
+        location.href = 'login.html';
+    }
 });
 
 /* end FOOTER */
@@ -19,6 +30,9 @@ document.getElementById("header_admin").innerHTML = `
                 <img class="secondary-icon" src="img/logotipo naranja.png" alt="logotipo adoptame">
             </a>
         </div>
+        <button class="logout-btn">
+            Cerrar sesi&oacute;n
+        </button>
     </nav>
 </header>
 `;

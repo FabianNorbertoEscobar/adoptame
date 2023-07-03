@@ -219,6 +219,22 @@ header,
     background-color: var(--first-brand-color) !important;
 }
 
+.logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.logout-btn:hover{
+    background-color: var(--second-brand-color);
+    color: whitesmoke;
+}
+
 /* end header */
 
 /* login */
@@ -327,7 +343,7 @@ label {
 input[type="text"],
 input[type="number"],
 textarea {
-    width: 90%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #cccccc;
