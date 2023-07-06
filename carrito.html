@@ -90,6 +90,10 @@
         <div v-if="!mostrarCarrito" class="contenedor-centrado">
             <button @click="obtenerCarrito">Mostrar carrito</button>
         </div>
+        <div v-if="mostrarCarrito" class="contenedor-centrado">
+            <button @click="mostrarCarrito=!mostrarCarrito">Ocultar carrito</button>
+            <button @click="obtenerCarrito">Actualizar carrito</button>
+        </div>
         <br>
         <div class="contenedor-centrado">
             <a href="admin.html">Men&uacute; principal</a>
@@ -125,6 +129,18 @@
                             alert('Error al obtener los productos.')
                         })
                 },
+                obtenerCarrito() {
+                    fetch(URL + 'carrito')
+                        .then(response => response.json())
+                        .then(data => {
+                            this.carrito = data
+                            this.mostrarCarrito = true
+                        })
+                        .catch(error => {
+                            console.error('Error al obtener el carrito:', error)
+                            alert('Error al obtener el carrito.')
+                        })
+                },
                 agregarAlCarrito(producto) {
                     fetch(URL + 'carrito', {
                         method: 'POST',
@@ -144,6 +160,9 @@
                             console.error('Error al agregar el producto al carrito:', error)
                             alert('Error al agregar el producto al carrito.')
                         })
+                    if (this.mostrarCarrito) {
+                        this.obtenerCarrito()
+                    }
                 },
                 restarDelCarrito(producto) {
                     fetch(URL + 'carrito', {
@@ -164,18 +183,9 @@
                             console.error('Error al restar el producto del carrito:', error)
                             alert('Error al restar el producto del carrito.')
                         })
-                },
-                obtenerCarrito() {
-                    fetch(URL + 'carrito')
-                        .then(response => response.json())
-                        .then(data => {
-                            this.carrito = data
-                            this.mostrarCarrito = true
-                        })
-                        .catch(error => {
-                            console.error('Error al obtener el carrito:', error)
-                            alert('Error al obtener el carrito.')
-                        })
+                    if (this.mostrarCarrito) {
+                        this.obtenerCarrito()
+                    }
                 },
             },
         })
