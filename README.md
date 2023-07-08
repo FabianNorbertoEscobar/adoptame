@@ -29,6 +29,7 @@ Adóptame es un sitio web de adopción de animales (perros y gatos), donde se pu
 * CSS
 * JavaScript
 * JQuery
+* VueJS
 * Git
 * GitHub.io
 * Netlify

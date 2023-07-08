@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Sitio web de adopci&oacute;n de mascotas">
+    <title>Ad&oacute;ptame - Admin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/jpg" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles_admin.css'>
+
+    <script>
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+        var username = localStorage.getItem('username');
+
+        if (!isLoggedIn) {
+            location.href = 'login.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header_admin"></div>
+
+    <div>
+        <h3>Administraci&oacute;n</h3><br>
+        <table>
+            <tr>
+                <td class="contenedor-centrado"><a href="alta_productos.html">Alta de productos</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado "><a href="listado_productos.html">Listado de productos</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado "><a href="modificacion_productos.html">Modificaci&oacute;n de
+                        productos</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado "><a href="baja_productos.html">Baja de productos</a></td>
+            </tr>
+            <tr>
+                <td class="contenedor-centrado "><a href="carrito.html">Carrito de compras</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="footer_admin"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
+    <script src="js/scripts_admin.js"></script>
+
+</body>
+
+</html>
