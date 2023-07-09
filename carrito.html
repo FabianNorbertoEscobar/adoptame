@@ -93,6 +93,7 @@
         <div v-if="mostrarCarrito" class="contenedor-centrado">
             <button @click="mostrarCarrito=!mostrarCarrito">Ocultar carrito</button>
             <button @click="obtenerCarrito">Actualizar carrito</button>
+            <button @click="vaciarCarrito">Vaciar carrito</button>
         </div>
         <br>
         <div class="contenedor-centrado">
@@ -182,6 +183,25 @@
                         .catch(error => {
                             console.error('Error al restar el producto del carrito:', error)
                             alert('Error al restar el producto del carrito.')
+                        })
+                    if (this.mostrarCarrito) {
+                        this.obtenerCarrito()
+                    }
+                },
+                vaciarCarrito() {
+                    fetch(URL + 'carrito/vaciar', {
+                        method: 'DELETE',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert(data.message)
+                        })
+                        .catch(error => {
+                            console.error('Error al vaciar el carrito:', error)
+                            alert('Error al vaciar el carrito.')
                         })
                     if (this.mostrarCarrito) {
                         this.obtenerCarrito()
