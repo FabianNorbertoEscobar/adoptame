@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Sitio web de adopci&oacute;n de mascotas">
+    <title>Ad&oacute;ptame - Admin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/jpg" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles_admin.css'>
+
+    <script>
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+        var username = localStorage.getItem('username');
+
+        if (!isLoggedIn) {
+            location.href = 'login.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header_admin"></div>
+
+    <h3>Listado de productos</h3><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th align="right">Precio</th>
+            </tr>
+        </thead>
+        <tbody id="tablaProductos">
+        </tbody>
+    </table>
+    <br>
+    <div class="contenedor-centrado">
+        <a href="admin.html">Men&uacute; principal</a>
+    </div>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+        //const URL = "https://fabianescobar.pythonanywhere.com/"
+
+        fetch(URL + 'productos')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    throw new Error('Error al obtener los productos.')
+                }
+            })
+            .then(function (data) {
+                var tablaProductos = document.getElementById('tablaProductos')
+
+                data.forEach(function (producto) {
+                    var fila = document.createElement('tr')
+                    fila.innerHTML = '<td>' + producto.codigo + '</td>' +
+                        '<td>' + producto.descripcion + '</td>' +
+                        '<td align="right">' + producto.cantidad + '</td>' +
+                        '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + producto.precio + '</td>'
+                    tablaProductos.appendChild(fila)
+                })
+            })
+            .catch(function (error) {
+                console.log('Error:', error)
+                alert('Error al obtener los productos.')
+            })
+    </script>
+
+    <div id="footer_admin"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
+    <script src="js/scripts_admin.js"></script>
+
+</body>
+
+</html>
