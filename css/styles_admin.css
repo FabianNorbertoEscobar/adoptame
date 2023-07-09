@@ -1,0 +1,398 @@
+/* global settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+/* end global settings */
+
+/* variables */
+
+:root {
+    --first-brand-color: #02DAFF;
+    --second-brand-color: #FF9331;
+    --third-brand-color: #D6B3F7;
+    --fourth-brand-color: #0400ff;
+    --fifth-brand-color: #7c07c0;
+    --sixth-brand-color: #ff91ed;
+    --seventh-brand-color: #ffec43;
+}
+
+/* end variables */
+
+/* brand colors */
+
+.brand-color-1 {
+    color: var(--first-brand-color);
+}
+
+.bg-brand-color-1 {
+    background-color: var(--first-brand-color);
+}
+
+.brand-color-2 {
+    color: var(--second-brand-color);
+}
+
+.bg-brand-color-2 {
+    background-color: var(--second-brand-color);
+}
+
+.brand-color-3 {
+    color: var(--third-brand-color);
+}
+
+.bg-brand-color-3 {
+    background-color: var(--third-brand-color);
+}
+
+.brand-color-4 {
+    color: var(--fourth-brand-color);
+}
+
+.bg-brand-color-4 {
+    background-color: var(--fourth-brand-color);
+}
+
+.brand-color-5 {
+    color: var(--fifth-brand-color);
+}
+
+.bg-brand-color-5 {
+    background-color: var(--fifth-brand-color);
+}
+
+.brand-color-6 {
+    color: var(--sixth-brand-color);
+}
+
+.bg-brand-color-6 {
+    background-color: var(--sixth-brand-color);
+}
+
+.brand-color-7 {
+    color: var(--seventh-brand-color);
+}
+
+.bg-brand-color-7 {
+    background-color: var(--seventh-brand-color);
+}
+
+/* end brand colors */
+
+/* custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px whitesmoke;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--fourth-brand-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fourth-brand-color);
+}
+
+html {
+    scrollbar-color: var(--fourth-brand-color) whitesmoke;
+    scrollbar-width: thin;
+}
+
+/* end custom scrollbar */
+
+/* titles and texts */
+
+.page-content {
+    margin: 3%;
+}
+
+.title {
+    color: var(--second-brand-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin: 30px;
+}
+
+.section-title {
+    color: var(--second-brand-color);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin: 30px;
+}
+
+.subtitle {
+    color: var(--second-brand-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 12px 0px;
+}
+
+.text {
+    text-align: justify;
+    font-size: 1rem;
+}
+
+/* end titles and texts */
+
+/* footer */
+
+#footer_admin {
+    margin-top: 8%;
+}
+
+footer {
+    bottom: 0px;
+    width: 100%;
+    background: var(--first-brand-color);
+    margin-top: 2%;
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 30px !important;
+}
+
+.footer-bottom {
+    padding: 5px;
+    font-size: 0.7rem;
+    background: black;
+    text-align: center;
+}
+
+.footer-bottom span {
+    color: lightgray;
+}
+
+/* end footer */
+
+/* header */
+
+header,
+.navbar {
+    top: 0;
+    margin-bottom: 90px !important;
+}
+
+.navbar {
+    background-color: var(--first-brand-color);
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.063em;
+    font-weight: 600;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.primary-icon {
+    height: 45px;
+}
+
+.secondary-icon {
+    height: 35px;
+    margin-left: 5px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    background-color: var(--first-brand-color) !important;
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.logout-btn:hover{
+    background-color: var(--second-brand-color);
+    color: whitesmoke;
+}
+
+/* end header */
+
+/* login */
+section .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.login-container button {
+    background-color: var(--second-brand-color);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: var(--second-brand-color);
+    opacity: 0.7;
+}
+
+.login-container .error-message {
+    color: red !important;
+    margin-bottom: 10px;
+    padding: 3%;
+    text-align: center;
+}
+
+/* end login */
+
+/* admin */
+
+body {
+    background-image: url("../img/admin/admin_bg.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.contenedor-centrado {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+p {
+    background-color: whitesmoke;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    color: var(--second-brand-color);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+
+table {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: var(--first-brand-color);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--fourth-brand-color);
+}
+
+button {
+    padding: 8px;
+    margin: 4px;
+    background-color: var(--fourth-brand-color);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--fourth-brand-color);
+    opacity: 0.7;
+}
+
+a {
+    padding: 8px;
+    margin: 4px;
+    background-color: var(--second-brand-color);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 85%;
+}
+
+a:hover {
+    background-color: var(--second-brand-color);
+    opacity: 0.7;
+}
+
+/* end admin */
