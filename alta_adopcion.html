@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <meta name="description" content="Sitio web de adopci&oacute;n de mascotas">
-        <title>Ad&oacute;ptame - Admin</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel="icon" type="image/jpg" href="img/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-        <link rel='stylesheet' type='text/css' media='screen' href='css/styles_admin.css'>
-    
-        <script>
-            var isLoggedIn = localStorage.getItem('isLoggedIn');
-            var username = localStorage.getItem('username');
-    
-            if (!isLoggedIn) {
-                location.href = 'login.html';
-            }
-        </script>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="description" content="Sitio web de adopci&oacute;n de mascotas">
+    <title>Ad&oacute;ptame - Admin</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/jpg" href="img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/styles_admin.css'>
+
+    <script>
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+        var username = localStorage.getItem('username');
+
+        if (!isLoggedIn) {
+            location.href = 'login.html';
+        }
+    </script>
+
 <body>
     <div id="header_admin"></div>
 
     <h3>Registro de adopciones</h3><br>
 
     <form id="formulario">
-        <label for="id_adopcion">Id Adopcion:</label>
-        <input type="text" id="id_adopcion" name="id_adopcion" required><br>
 
         <label for="id_animal">Id Animal:</label>
         <input type="text" id="id_animal" name="id_animal" required><br>
@@ -36,34 +36,27 @@
         <input type="text" id="id_persona" name="id_persona" required><br>
 
         <div class="contenedor-centrado">
-            <button type="submit">Agregar Adopcion</button>
+            <button type="submit">Agregar Adopci&oacute;n</button>
             <a href="admin.html">Men&uacute; principal</a>
         </div>
     </form>
-    
+
     <script>
         // const URL = "http://127.0.0.1:5000/"
         const URL = "https://fabianescobar.pythonanywhere.com/"
 
         document.getElementById('formulario').addEventListener('submit', function (event) {
-            event.preventDefault() // Evitamos que se recargue la página
+            event.preventDefault()
 
-            var id_adopcion = document.getElementById('id_adopcion').value
             var id_animal = document.getElementById('id_animal').value
             var id_persona = document.getElementById('id_persona').value
-           
 
             var adopcion = {
-                id_adopcion: id_adopcion,
-                id_animal: id_animal,
-                id_persona: id_persona,
-                id_adopcion: id_adopcion,
                 id_animal: id_animal,
                 id_persona: id_persona,
             }
-            console.log(adopcion)
 
-            fetch(URL + 'adopcion', {
+            fetch(URL + 'adopciones', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -79,7 +72,6 @@
                 })
                 .then(function (data) {
                     alert('Alta de adopcion correcta')
-                    document.getElementById('id_adopcion').value = ""
                     document.getElementById('id_animal').value = ""
                     document.getElementById('id_persona').value = ""
                 })
@@ -90,7 +82,6 @@
         })
     </script>
 
-
     <div id="footer_admin"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -98,4 +89,5 @@
     <script src="https://kit.fontawesome.com/84ee914179.js" crossorigin="anonymous"></script>
     <script src="js/scripts_admin.js"></script>
 </body>
+
 </html>
