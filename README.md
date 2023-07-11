@@ -8,11 +8,23 @@ Proyecto del curso Full Stack Python del programa Codo a Codo del Gobierno de la
 
 Adóptame es un sitio web de adopción de animales (perros y gatos), donde se puede consultar para adoptar a algunos de los que están buscando una familia, leer las experiencias de otros casos de adopción y conocer dónde se encuentra el refugio en caso de querer ir a visitarlo.
 
-### Sitio web:
+#### Sitio web:
 [Adóptame](https://adoptame-ba.netlify.app)
+
+#### Panel de administracion:
+[Adóptame admin](https://adoptame-ba.netlify.app/admin.html)
 
 #### Ambiente de desarrollo:
 [Adóptame DEV](https://fabiannorbertoescobar.github.io/adoptame/)
+
+#### Ambiente de desarrollo:
+[Adóptame DEV admin](https://fabiannorbertoescobar.github.io/adoptame/admin.html)
+
+#### API REST:
+[API REST PROD](https://fabianescobar.pythonanywhere.com)
+
+#### Repo backend:
+[Repo backend](https://github.com/FabianNorbertoEscobar/adoptame-api/)
 
 #### Estado de despliegue en Netlify:
 
@@ -29,6 +41,7 @@ Adóptame es un sitio web de adopción de animales (perros y gatos), donde se pu
 * CSS
 * JavaScript
 * JQuery
+* VueJS
 * Git
 * GitHub.io
 * Netlify
